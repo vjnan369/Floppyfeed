@@ -1,44 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0aa07607-1d1e-4984-ab20-75df5dba38d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newfloppyfeed.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/model/Content.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/model/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageContentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageMessagesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageRegistrationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageSessionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/servicesImpl/ManageContentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/servicesImpl/ManageMessagesServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/servicesImpl/ManageSessionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/servicesImpl/ManageUserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/servicesImpl/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/utility/ContentInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/utility/MessagesInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/utility/MockNeatGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/utility/UsersInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/project/model/Content.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/project/model/Messages.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/project/model/Users.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/project/services/ManageContentService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/project/services/ManageMessagesService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/project/servicesImpl/ManageMessagesServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/project/servicesImpl/Test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/project/utility/ContentInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/project/utility/MessagesInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/project/utility/UsersInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/new-floppyfeed-1.0-SNAPSHOT.jar" afterDir="false" />
-    </list>
+    <list default="true" id="0aa07607-1d1e-4984-ab20-75df5dba38d3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -285,7 +248,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="75" />
     <option name="y" value="16" />
     <option name="width" value="1281" />
@@ -386,7 +349,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539683994208" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539684365908" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
