@@ -1,6 +1,5 @@
-package project.servicesImpl;
+package project.services.servicesImpl;
 
-import project.model.Content;
 import project.model.Message;
 import project.services.ManageMessagesService;
 import project.utility.MessagesInfo;

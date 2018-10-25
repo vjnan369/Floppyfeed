@@ -67,7 +67,14 @@ public class ContentInfo {
             "Was justice improve age article between. No projection as up preference reasonably delightful celebrated. Preserved and abilities assurance tolerably breakfast use saw. And painted letters forming far village elderly compact. Her rest west each spot his and you knew. Estate gay wooded depart six far her. Of we be have it lose gate bred. Do separate removing or expenses in. Had covered but evident chapter matters anxious. \n" +
             "\n";
 
+    List<Content> contents;
 
+
+    ContentInfo() {
+        contents = new ArrayList<Content>();
+        contents.add(content1);
+        contents.add(content2);
+    }
     Content content1 = new Content(
             id1, type1, title1, mediaTypeId1, userId1, status1, description1, publishedAt1, createdAt1, updatedAt1
     );
@@ -75,10 +82,17 @@ public class ContentInfo {
             id2, type2, title2, mediaTypeId2, userId2, status2, description2, publishedAt2, createdAt2, updatedAt2
     );
 
+    Content getContentById(int id) {
+        for(Content content : contents) {
+            if(content.getId() == id) {
+                return content;
+            }
+        }
+        return null;
+    }
+
     public List<Content> contents() {
-        List<Content> contents = new ArrayList<>();
-        contents.add(content1);
-        contents.add(content2);
+
         return contents;
     }
 

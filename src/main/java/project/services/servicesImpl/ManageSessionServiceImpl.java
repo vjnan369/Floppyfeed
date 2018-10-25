@@ -1,4 +1,4 @@
-package project.servicesImpl;
+package project.services.servicesImpl;
 
 public class ManageSessionServiceImpl {
     boolean createSession(){

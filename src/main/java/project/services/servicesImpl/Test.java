@@ -1,6 +1,5 @@
-package project.servicesImpl;
+package project.services.servicesImpl;
 
-import project.model.Content;
 import project.utility.ContentInfo;
 
 import java.util.ArrayList;

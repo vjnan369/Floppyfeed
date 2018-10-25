@@ -3,41 +3,16 @@ package project.model;
 import java.util.Date;
 
 public class Content {
-    static int id;
-    static String type;
-    static String title;
-    static int userId;
-    static int mediaTypeId;
-    static String description;
-    static String status;
-
-    public static Date getPublishedAt() {
-        return publishedAt;
-    }
-
-    public static void setPublishedAt(Date publishedAt) {
-        Content.publishedAt = publishedAt;
-    }
-
-    public static Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public static void setCreatedAt(Date createdAt) {
-        Content.createdAt = createdAt;
-    }
-
-    public static Date getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public static void setUpdatedAt(Date updatedAt) {
-        Content.updatedAt = updatedAt;
-    }
-
-    static Date publishedAt;
-    static Date createdAt;
-    static Date updatedAt;
+    private int id;
+    private String type;
+    private String title;
+    private int userId;
+    private int mediaTypeId;
+    private String description;
+    private String status;
+    private Date publishedAt;
+    private Date createdAt;
+    private Date updatedAt;
 
     public Content(int id, String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
         this.id = id;
@@ -52,51 +27,99 @@ public class Content {
         this.publishedAt = publishedAt;
     }
 
-    public static String getType() {
+    public Date getPublishedAt() {
+        return publishedAt;
+    }
+
+    public void setPublishedAt(Date publishedAt) {
+        this.publishedAt = publishedAt;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getType() {
         return type;
     }
 
-    public static void setType(String type) {
-        Content.type = type;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public static String getTitle() {
+    public String getTitle() {
         return title;
     }
 
-    public static void setTitle(String title) {
-        Content.title = title;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public static int getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public static void setUserId(int userId) {
-        Content.userId = userId;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public static int getMediaTypeId() {
+    public int getMediaTypeId() {
         return mediaTypeId;
     }
 
-    public static void setMediaTypeId(int mediaTypeId) {
-        Content.mediaTypeId = mediaTypeId;
+    public void setMediaTypeId(int mediaTypeId) {
+        this.mediaTypeId = mediaTypeId;
     }
 
-    public static String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    public static void setDescription(String description) {
-        Content.description = description;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public static String getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public static void setStatus(String status) {
-        Content.status = status;
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Content{" +
+                "id=" + id +
+                "type=" + type +
+                "title=" + title +
+                "mediaTypeId=" + mediaTypeId +
+                "userId=" + userId +
+                "description=" + description +
+                "status=" + status +
+                "publishedAt=" + publishedAt +
+                "createdAt=" + createdAt +
+                "updatedAt=" + updatedAt +
+                "}";
     }
 }

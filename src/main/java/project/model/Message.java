@@ -3,12 +3,12 @@ package project.model;
 import java.util.Date;
 
 public class Message {
-    static int id;
-    static int userId;
-    static int contentId;
-    static String description;
-    static Date createdAt;
-    static Date updatedAt;
+    private int id;
+    private int userId;
+    private int contentId;
+    private String description;
+    private Date createdAt;
+    private Date updatedAt;
 
     public Message(int id, int userId, int contentId, String description, Date createdAt, Date updatedAt) {
         this.id = id;
@@ -19,51 +19,55 @@ public class Message {
         this.updatedAt = updatedAt;
     }
 
-    public static int getId() {
-        return id;
-    }
-
-    public static void setId(int id) {
-        Message.id = id;
-    }
-
-    public static int getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public static void setUserId(int userId) {
-        Message.userId = userId;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public static int getContentId() {
+    public int getContentId() {
         return contentId;
     }
 
-    public static void setContentId(int contentId) {
-        Message.contentId = contentId;
+    public void setContentId(int contentId) {
+        this.contentId = contentId;
     }
 
-    public static String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    public static void setDescription(String description) {
-        Message.description = description;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public static Date getCreatedAt() {
+    public Date getCreatedAt() {
         return createdAt;
     }
 
-    public static void setCreatedAt(Date createdAt) {
-        Message.createdAt = createdAt;
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 
-    public static Date getUpdatedAt() {
+    public Date getUpdatedAt() {
         return updatedAt;
     }
 
-    public static void setUpdatedAt(Date updatedAt) {
-        Message.updatedAt = updatedAt;
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
+    @Override
+    public String toString() {
+        return "Message{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", contentId=" + contentId +
+                ", description='" + description + '\'' +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
+                '}';
     }
 }
