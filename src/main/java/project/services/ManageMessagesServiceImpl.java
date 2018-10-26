@@ -1,7 +1,7 @@
-package project.services.servicesImpl;
+package project.services;
 
-import project.model.Message;
 import project.services.ManageMessagesService;
+import project.model.Message;
 import project.utility.MessagesInfo;
 
 import java.util.List;

@@ -1,16 +1,45 @@
-package project.utility;
+package project.services;
 
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 import project.model.Content;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
-public class ContentInfo {
-    List<Content> contents;
+import static org.junit.Assert.assertEquals;
 
-    public ContentInfo() {
-        contents = new ArrayList<Content>();
+@RunWith(JUnitParamsRunner.class)
+public class ManageContentServiceImplTest {
+
+    @Parameterized.Parameters
+    public static Collection<Object[]> contentData() {
+        return Arrays.asList(new Object[][]{
+                {1, new Content(1, "fictional", "Percy jackson and sea of monsters",
+                        1,
+                        1,
+                        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page",
+                        "drafted",
+                        new Date(),
+                        new Date(),
+                        new Date()
+                ).toString()}
+        });
+    }
+
+    @Test
+    @Parameters(method = "contentData")
+    public void getContentById(int id, String content) {
+        ManageContentServiceImpl manageContentService = new ManageContentServiceImpl();
+        assertEquals(content, manageContentService.getContentById(id).toString());
+    }
+
+
+    @Parameterized.Parameters
+    public static Collection<Object[]> allContentData() {
+        List<Content> contents = new ArrayList<Content>();
         contents.add(new Content(1, "fictional", "Percy jackson and sea of monsters",
                 1,
                 1,
@@ -56,18 +85,16 @@ public class ContentInfo {
                 new Date(),
                 new Date()
         ));
+        return Arrays.asList(new Object[][]{
+                {contents.toString()}
+
+        });
     }
 
-    public Content getContentById(int id) {
-        for(Content content : contents) {
-            if(content.getId() == id) {
-                return content;
-            }
-        }
-        return null;
-    }
-
-    public List<Content> fetchAllContent() {
-        return contents;
+    @Test
+    @Parameters(method = "allContentData")
+    public void fetchAllContent(String content) {
+        ManageContentServiceImpl manageContentService = new ManageContentServiceImpl();
+        assertEquals(content, manageContentService.fetchAllContent().toString());
     }
 }
