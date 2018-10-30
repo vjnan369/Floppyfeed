@@ -11,14 +11,13 @@ public class User {
     private Date updatedAt;
     private Date lastSignedAt;
 
-    public User(int id, String firstName, String lastName, String phoneNumber, Date createdAt, Date updatedAt, Date lastSignedAt){
+    public User(int id, String firstName, String lastName, String phoneNumber, Date createdAt, Date updatedAt){
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
-        this.lastSignedAt = lastSignedAt;
     }
 
     @Override
@@ -94,14 +93,6 @@ public class User {
         this.updatedAt = updatedAt;
     }
 
-    public Date getLastSignedAt() {
-        return lastSignedAt;
-    }
-
-    public void setLastSignedAt(Date lastSignedAt) {
-        this.lastSignedAt = lastSignedAt;
-    }
-
     @Override
     public String toString() {
         return "User{" +
@@ -111,7 +102,6 @@ public class User {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
-                ", lastSignedAt=" + lastSignedAt +
                 '}';
     }
 }

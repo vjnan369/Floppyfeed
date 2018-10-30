@@ -29,7 +29,7 @@ public class ManageContentServiceImplTest {
     static Content content;
     static List<Content> contents = new ArrayList<>();
 
-    // Initializing all static variables
+    // Initializing all variables
     @BeforeAll
     static void initializeAll() {
         id = 1;

@@ -28,7 +28,7 @@ public class ManageMessageServiceImplTest {
     static User user;
     static List<Message> messages = new ArrayList<>();
 
-    // Initializing all static variables
+    // Initializing all variables
     @BeforeAll
     static void initializeAll() {
         id = 1;
@@ -44,7 +44,7 @@ public class ManageMessageServiceImplTest {
         messages.add(new Message(2, 2, 2, "this is for second message!",
                 new Date(), new Date()));
         content = new Content(1, "fictional", "percy jackson", 1, 1, "hello world", "published", new Date(), new Date(), new Date());
-        user = new User(1, "sam", "singh", "984743633", new Date(), new Date(), new Date());
+        user = new User(1, "sam", "singh", "984743633", new Date(), new Date());
     }
 
     // Test case for getMessageById method
