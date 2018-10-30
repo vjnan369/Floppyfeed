@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0aa07607-1d1e-4984-ab20-75df5dba38d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/project/services/ManageMessageServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project/services/ManageMessageServiceImplTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="0aa07607-1d1e-4984-ab20-75df5dba38d3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,7 +33,7 @@
           <entry key="class" value="5" />
           <entry key="groovy" value="1" />
           <entry key="iml" value="2" />
-          <entry key="java" value="72" />
+          <entry key="java" value="74" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
@@ -44,7 +42,7 @@
           <entry key="CLASS" value="5" />
           <entry key="Groovy" value="1" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="72" />
+          <entry key="JAVA" value="74" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
@@ -110,15 +108,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="54" column="31" lean-forward="true" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/project/services/ManageContentServiceImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
@@ -133,11 +122,32 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/project/services/ManageMessageServiceImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="84" column="84" selection-start-line="84" selection-start-column="84" selection-end-line="84" selection-end-column="84" />
+            <state relative-caret-position="254">
+              <caret line="84" column="88" lean-forward="true" selection-start-line="84" selection-start-column="88" selection-end-line="84" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/ArrayList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="330" column="65" selection-start-line="330" selection-start-column="59" selection-end-line="330" selection-end-column="65" />
+              <folding>
+                <element signature="e#0#54492#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/List.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="143">
+              <caret line="511" column="12" selection-start-line="511" selection-start-column="12" selection-end-line="511" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -208,18 +218,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/repository/ContentInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1063">
-              <caret line="116" column="31" selection-start-line="116" selection-start-column="31" selection-end-line="116" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -236,11 +234,11 @@
       <find>sex</find>
       <find>ManageContentServiceImplTest</find>
       <find>ant</find>
-      <find>equals</find>
       <find>hashcode(</find>
       <find>equals(</find>
       <find>getcontentbyid</find>
       <find>jupiter-api</find>
+      <find>equals</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -416,7 +414,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540880566584" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540881823569" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -545,8 +543,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ManageMessageServiceImplTest.getMessagesByUser (1)" />
-        <item itemvalue="JUnit.ManageMessageServiceImplTest.getMessagesByUser" />
         <item itemvalue="JUnit.ManageMessageServiceImplTest.getMessagesByContent (1)" />
+        <item itemvalue="JUnit.ManageMessageServiceImplTest.getMessagesByUser" />
         <item itemvalue="JUnit.ManageMessageServiceImplTest.getMessagesByContent" />
         <item itemvalue="JUnit.ManageMessageServiceImplTest.getMessageByContent" />
       </list>
@@ -566,9 +564,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ManageMessageServiceImplTest_getMessageById - 2018.10.30 at 11h 11m 34s.xml">
-      <configuration name="ManageMessageServiceImplTest.getMessageById" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ManageMessageServiceImplTest_getMessageById - 2018.10.30 at 11h 14m 51s.xml">
       <configuration name="ManageMessageServiceImplTest.getMessageById" configurationId="JUnit" />
     </history-entry>
@@ -596,6 +591,9 @@
     <history-entry file="ManageMessageServiceImplTest_getMessagesByUser_(1) - 2018.10.30 at 11h 41m 50s.xml">
       <configuration name="ManageMessageServiceImplTest.getMessagesByUser (1)" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ManageMessageServiceImplTest_getMessagesByUser_(1) - 2018.10.30 at 11h 52m 50s.xml">
+      <configuration name="ManageMessageServiceImplTest.getMessagesByUser (1)" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -619,7 +617,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37331334" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3718141" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.27886057" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -966,10 +964,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="511" column="12" selection-start-line="511" selection-start-column="12" selection-end-line="511" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="330" column="65" selection-start-line="330" selection-start-column="59" selection-end-line="330" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#54492#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/project/services/ManageMessageServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="84" column="84" selection-start-line="84" selection-start-column="84" selection-end-line="84" selection-end-column="84" />
+        <state relative-caret-position="254">
+          <caret line="84" column="88" lean-forward="true" selection-start-line="84" selection-start-column="88" selection-end-line="84" selection-end-column="88" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

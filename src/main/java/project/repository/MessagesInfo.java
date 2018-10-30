@@ -40,13 +40,13 @@ public class MessagesInfo {
     }
 
     public List<Message> getMessagesByUser(User user) {
-        List<Message> messages = new ArrayList<>();
+        List<Message> newMessages = new ArrayList<>();
         for (Message message : messages) {
             if (message.getUserId() == user.getId()) {
-                messages.add(message);
+                newMessages.add(message);
             }
         }
-        return messages;
+        return newMessages;
     }
 
     public Message createMessage(int id, int userId, int contentId, String description) {
