@@ -13,7 +13,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Stream;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static project.services.ManageContentServiceImplTest.title;
 
 public class ManageMessageServiceImplTest {
     static int id;
@@ -61,7 +63,7 @@ public class ManageMessageServiceImplTest {
     }
 
 
-    // Test case for getMessagesByContent method
+    // Test case for getMessagesByContent
     @ParameterizedTest
     @MethodSource("getMessagesByContentTestData")
     public void getMessagesByContent(Content content, List<Message> expectedResult) {
@@ -77,7 +79,7 @@ public class ManageMessageServiceImplTest {
         );
     }
 
-    // Test case for getMessagesByUser method
+    // Test case for getMessagesByUser
     @ParameterizedTest
     @MethodSource("getMessagesByIdTestData")
     public void getMessagesByUser(User user, List<Message> expectedResult) {
@@ -90,6 +92,53 @@ public class ManageMessageServiceImplTest {
         filteredMessages.add(message);
         return Stream.of(
                 Arguments.of(user, filteredMessages)
+        );
+    }
+
+
+    // Test case for creat Message
+    @ParameterizedTest
+    @MethodSource("createMessageTestData")
+    public void createMessage(int id, int userId, int contentId, String description, Message expectedResult) {
+        ManageMessageServiceImpl manageMessageService = new ManageMessageServiceImpl();
+        assertTrue(expectedResult.equals(manageMessageService.createMessage(id, userId, contentId, description)));
+    }
+
+
+    static Stream<Arguments> createMessageTestData() {
+        return Stream.of(
+                Arguments.of(id, userId, contentId, description, message)
+        );
+    }
+
+
+//     Test case for update message
+    @ParameterizedTest
+    @MethodSource("updateMessageTestData")
+    public void updateMessage(int id, int userId, int contentId, String description, Message expectedResult) {
+        ManageMessageServiceImpl manageMessageService = new ManageMessageServiceImpl();
+        assertTrue(expectedResult.equals(manageMessageService.updateMessage(id, userId, contentId, description)));
+    }
+
+    static Stream<Arguments> updateMessageTestData() {
+        return Stream.of(
+                Arguments.of(id, userId, contentId, description, message)
+        );
+    }
+
+
+    //Test case for delete message
+    @ParameterizedTest
+    @MethodSource("deleteMessageTestData")
+    public void deleteContent(int id, boolean expectedResult) {
+        ManageMessageServiceImpl manageMessageService = new ManageMessageServiceImpl();
+        assertEquals(expectedResult, manageMessageService.deleteMessage(id));
+    }
+
+    static Stream<Arguments> deleteMessageTestData() {
+        return Stream.of(
+                Arguments.of(1, true),
+                Arguments.of(2, true)
         );
     }
 
