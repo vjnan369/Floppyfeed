@@ -82,7 +82,7 @@ public class ManageMessageServiceImplTest {
     @MethodSource("getMessagesByIdTestData")
     public void getMessagesByUser(User user, List<Message> expectedResult) {
         ManageMessageServiceImpl  manageMessageService = new ManageMessageServiceImpl();
-        assertTrue(expectedResult.equals(manageMessageService.getMessageById(id)));
+        assertTrue(expectedResult.equals(manageMessageService.getMessagesByUser(user)));
     }
 
     static Stream<Arguments> getMessagesByIdTestData() {
