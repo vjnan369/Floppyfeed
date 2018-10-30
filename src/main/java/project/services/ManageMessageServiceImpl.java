@@ -8,7 +8,7 @@ import project.repository.MessagesInfo;
 import java.util.List;
 
 public class ManageMessageServiceImpl implements ManageMessagesService {
-    MessagesInfo messagesInfo = new MessagesInfo();
+    private MessagesInfo messagesInfo = new MessagesInfo();
 
     public Message getMessageById(int id) {
         return messagesInfo.getMessageById(id);

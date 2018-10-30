@@ -1,6 +1,6 @@
 package project.services;
 
-public class ManageSessionServiceImpl {
+public class ManageAuthorityServiceImpl {
     boolean createSession(){
         return true;
     }

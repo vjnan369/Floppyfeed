@@ -82,7 +82,8 @@ public class MessagesInfo {
         }
         if (messageIndex > -1) {
             messages.remove(messageIndex);
+            return true;
         }
-        return true;
+        return false;
     }
 }

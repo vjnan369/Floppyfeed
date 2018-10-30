@@ -1,6 +1,6 @@
 package project.services;
 
-public interface ManageSessionService {
+public interface ManageAuthorityService {
     boolean createSession();
     boolean deleteSession();
 }

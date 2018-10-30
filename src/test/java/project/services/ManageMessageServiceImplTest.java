@@ -15,7 +15,6 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static project.services.ManageContentServiceImplTest.title;
 
 public class ManageMessageServiceImplTest {
     static int id;
@@ -44,7 +43,7 @@ public class ManageMessageServiceImplTest {
                 new Date(), new Date()));
         messages.add(new Message(2, 2, 2, "this is for second message!",
                 new Date(), new Date()));
-        content = new Content(1, "fictional","percy jackson", 1, 1, "hello world", "published", new Date(), new Date(), new Date());
+        content = new Content(1, "fictional", "percy jackson", 1, 1, "hello world", "published", new Date(), new Date(), new Date());
         user = new User(1, "sam", "singh", "984743633", new Date(), new Date(), new Date());
     }
 
@@ -52,7 +51,7 @@ public class ManageMessageServiceImplTest {
     @ParameterizedTest
     @MethodSource("getMessagByIdTestData")
     public void getMessageById(int id, Message expectedResult) {
-        ManageMessageServiceImpl  manageMessageService = new ManageMessageServiceImpl();
+        ManageMessageServiceImpl manageMessageService = new ManageMessageServiceImpl();
         assertTrue(expectedResult.equals(manageMessageService.getMessageById(id)));
     }
 
@@ -67,7 +66,7 @@ public class ManageMessageServiceImplTest {
     @ParameterizedTest
     @MethodSource("getMessagesByContentTestData")
     public void getMessagesByContent(Content content, List<Message> expectedResult) {
-        ManageMessageServiceImpl  manageMessageService = new ManageMessageServiceImpl();
+        ManageMessageServiceImpl manageMessageService = new ManageMessageServiceImpl();
         assertTrue(expectedResult.equals(manageMessageService.getMessagesByContent(content)));
     }
 
@@ -83,7 +82,7 @@ public class ManageMessageServiceImplTest {
     @ParameterizedTest
     @MethodSource("getMessagesByIdTestData")
     public void getMessagesByUser(User user, List<Message> expectedResult) {
-        ManageMessageServiceImpl  manageMessageService = new ManageMessageServiceImpl();
+        ManageMessageServiceImpl manageMessageService = new ManageMessageServiceImpl();
         assertTrue(expectedResult.equals(manageMessageService.getMessagesByUser(user)));
     }
 
@@ -96,7 +95,7 @@ public class ManageMessageServiceImplTest {
     }
 
 
-    // Test case for creat Message
+    // Test case for create Message
     @ParameterizedTest
     @MethodSource("createMessageTestData")
     public void createMessage(int id, int userId, int contentId, String description, Message expectedResult) {
@@ -112,7 +111,7 @@ public class ManageMessageServiceImplTest {
     }
 
 
-//     Test case for update message
+    //     Test case for update message
     @ParameterizedTest
     @MethodSource("updateMessageTestData")
     public void updateMessage(int id, int userId, int contentId, String description, Message expectedResult) {

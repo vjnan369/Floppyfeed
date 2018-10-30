@@ -51,7 +51,7 @@ public class Content {
         result = prime * result + userId;
         result = prime * result + mediaTypeId;
         result = prime * result + ((title == null) ? 0 : title.hashCode());
-        result = prime * result + ((description == null) ? 0 : description.hashCode());
+        result = prime *     result + ((description == null) ? 0 : description.hashCode());
         result = prime * result + ((status == null) ? 0 : status.hashCode());
         return result;
     }

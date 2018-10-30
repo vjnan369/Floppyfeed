@@ -116,8 +116,9 @@ public class ContentInfo {
         }
         if(contentIndex > -1) {
             contents.remove(contentIndex);
+            return true;
         }
-        return true;
+        return false;
     }
 
 }
