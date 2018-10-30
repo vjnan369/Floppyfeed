@@ -11,6 +11,41 @@ public class User {
     private Date updatedAt;
     private Date lastSignedAt;
 
+    public User(int id, String firstName, String lastName, String phoneNumber, Date createdAt, Date updatedAt, Date lastSignedAt){
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.lastSignedAt = lastSignedAt;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+        User user = (User) obj;
+        return (id == user.getId() && firstName == user.firstName && lastName == user.lastName
+                && phoneNumber == user.phoneNumber
+        );
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + id;
+        result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
+        result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
+        result = prime * result + ((phoneNumber == null) ? 0 : phoneNumber.hashCode());
+        return result;
+    }
+
     public int getId() {
         return id;
     }

@@ -8,8 +8,8 @@ import java.util.List;
 
 public interface ManageMessagesService {
     Message getMessageById(int id);
-    List<Message> fetchMessagesByContent(Content content);
-    List<Message> fetchMessageByUser(User user);
+    List<Message> getMessagesByContent(Content content);
+    List<Message> getMessagesByUser(User user);
     Message createMessage(int id, int userId, int contentId, String description);
     Message updateMessage(int id, int userId, int contentId, String description);
     boolean deleteMessage(int id);

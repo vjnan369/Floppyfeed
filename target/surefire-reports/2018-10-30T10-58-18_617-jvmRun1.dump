@@ -1,0 +1,23 @@
+# Created at 2018-10-30T10:58:20.578
+java.lang.BootstrapMethodError: java.lang.NoSuchMethodError: org.junit.platform.engine.TestDescriptor.prune()V
+	at org.junit.platform.launcher.core.Root.prune(Root.java:71)
+	at org.junit.platform.launcher.core.DefaultLauncher.discoverRoot(DefaultLauncher.java:121)
+	at org.junit.platform.launcher.core.DefaultLauncher.discover(DefaultLauncher.java:82)
+	at org.junit.platform.surefire.provider.TestPlanScannerFilter.accept(TestPlanScannerFilter.java:50)
+	at org.apache.maven.surefire.util.DefaultScanResult.applyFilter(DefaultScanResult.java:102)
+	at org.junit.platform.surefire.provider.JUnitPlatformProvider.scanClasspath(JUnitPlatformProvider.java:121)
+	at org.junit.platform.surefire.provider.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:111)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:383)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:344)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:417)
+Caused by: java.lang.NoSuchMethodError: org.junit.platform.engine.TestDescriptor.prune()V
+	at java.lang.invoke.MethodHandleNatives.resolve(Native Method)
+	at java.lang.invoke.MemberName$Factory.resolve(MemberName.java:975)
+	at java.lang.invoke.MemberName$Factory.resolveOrFail(MemberName.java:1000)
+	at java.lang.invoke.MethodHandles$Lookup.resolveOrFail(MethodHandles.java:1394)
+	at java.lang.invoke.MethodHandles$Lookup.linkMethodHandleConstant(MethodHandles.java:1750)
+	at java.lang.invoke.MethodHandleNatives.linkMethodHandleConstant(MethodHandleNatives.java:477)
+	... 11 more
+
+

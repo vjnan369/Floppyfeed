@@ -19,6 +19,31 @@ public class Message {
         this.updatedAt = updatedAt;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+        Message message = (Message) obj;
+        return (id == message.getId() && contentId == message.getContentId() && userId == message.getUserId()
+                && description == message.getDescription()
+        );
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + id;
+        result = prime * result + userId;
+        result = prime * result + contentId;
+        result = prime * result + ((description == null) ? 0 : description.hashCode());
+        return result;
+    }
+
     public int getId() {
         return id;
     }
