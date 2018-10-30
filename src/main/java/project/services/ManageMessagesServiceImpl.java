@@ -9,7 +9,8 @@ import java.util.List;
 
 public class ManageMessagesServiceImpl implements ManageMessagesService {
     MessagesInfo messagesInfo = new MessagesInfo();
-    public Message getMessageById(int id){
+
+    public Message getMessageById(int id) {
         return messagesInfo.getMessageById(id);
     }
 
@@ -21,15 +22,15 @@ public class ManageMessagesServiceImpl implements ManageMessagesService {
         return messagesInfo.fetchMessageByUser(user);
     }
 
-    public Message createMessage(int id, int userId, int contentId, String description){
+    public Message createMessage(int id, int userId, int contentId, String description) {
         return messagesInfo.createMessage(id, userId, contentId, description);
     }
 
-    public Message updateMessage(int id, int userId, int contentId, String description){
+    public Message updateMessage(int id, int userId, int contentId, String description) {
         return messagesInfo.updateMessage(id, userId, contentId, description);
     }
 
-    public boolean deleteMessage(int id){
+    public boolean deleteMessage(int id) {
         return messagesInfo.deleteMessage(id);
     }
 
