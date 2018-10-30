@@ -1,37 +1,36 @@
 package project.services;
 
-import project.services.ManageMessagesService;
+import project.model.Content;
 import project.model.Message;
-import project.utility.MessagesInfo;
+import project.model.User;
+import project.repository.MessagesInfo;
 
 import java.util.List;
 
 public class ManageMessagesServiceImpl implements ManageMessagesService {
+    MessagesInfo messagesInfo = new MessagesInfo();
     public Message getMessageById(int id){
-        MessagesInfo messagesInfo = new MessagesInfo();
-        return messagesInfo.message();
+        return messagesInfo.getMessageById(id);
     }
 
-    public List<Message> getAllMessagesByArticle() {
-        MessagesInfo messagesInfo = new MessagesInfo();
-        return messagesInfo.messages();
+    public List<Message> fetchMessagesByContent(Content content) {
+        return messagesInfo.fetchMessagesByContent(content);
     }
 
-    public List<Message> getAllMessagesByUser() {
-        MessagesInfo messagesInfo = new MessagesInfo();
-        return messagesInfo.messages();
-    };
-
-    public boolean createMessage(Message message) {
-        return true;
+    public List<Message> fetchMessageByUser(User user) {
+        return messagesInfo.fetchMessageByUser(user);
     }
 
-    public boolean updateMessage(Message message) {
-        return true;
+    public Message createMessage(int id, int userId, int contentId, String description){
+        return messagesInfo.createMessage(id, userId, contentId, description);
     }
 
-    public boolean deleteMessage(Message message) {
-        return true;
+    public Message updateMessage(int id, int userId, int contentId, String description){
+        return messagesInfo.updateMessage(id, userId, contentId, description);
+    }
+
+    public boolean deleteMessage(int id){
+        return messagesInfo.deleteMessage(id);
     }
 
 }

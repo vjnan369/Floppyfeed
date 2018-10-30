@@ -1,4 +1,4 @@
-package project.utility;
+package project.repository;
 
 import net.andreinc.mockneat.MockNeat;
 

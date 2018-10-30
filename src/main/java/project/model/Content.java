@@ -27,6 +27,35 @@ public class Content {
         this.publishedAt = publishedAt;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+        Content content = (Content) obj;
+        return (id == content.getId() && type == content.getType() && title == content.getTitle()
+                && userId == content.getUserId() && mediaTypeId == content.getMediaTypeId()
+                && description == content.getDescription() && status == content.getStatus()
+        );
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + id;
+        result = prime * result + ((type == null) ? 0 : type.hashCode());
+        result = prime * result + userId;
+        result = prime * result + mediaTypeId;
+        result = prime * result + ((title == null) ? 0 : title.hashCode());
+        result = prime * result + ((description == null) ? 0 : description.hashCode());
+        result = prime * result + ((status == null) ? 0 : status.hashCode());
+        return result;
+    }
+
     public Date getPublishedAt() {
         return publishedAt;
     }

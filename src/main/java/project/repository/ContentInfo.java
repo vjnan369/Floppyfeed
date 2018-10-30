@@ -1,4 +1,4 @@
-package project.utility;
+package project.repository;
 
 import project.model.Content;
 
@@ -15,7 +15,7 @@ public class ContentInfo {
                 1,
                 1,
                 "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page",
-                "drafted",
+                "published",
                 new Date(),
                 new Date(),
                 new Date()
@@ -70,4 +70,54 @@ public class ContentInfo {
     public List<Content> fetchAllContent() {
         return contents;
     }
+
+    public Content createContent(int id, String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
+        Content newContent = new Content(id, type, title, userId, mediaTypeId, description, status, publishedAt, createdAt, updatedAt);
+        contents.add(newContent);
+        return newContent;
+    }
+
+    public List<Content> searchContent(String searchText){
+        List<Content> searchContents = new ArrayList<Content>();
+        for(Content content : contents) {
+            if(content.getTitle().toLowerCase().contains(searchText.toLowerCase())
+                    || content.getDescription().toLowerCase().contains(searchText.toLowerCase())){
+                searchContents.add(content);
+            }
+        }
+        return searchContents;
+    }
+
+    public Content updateContent(int id, String type, String title, int userId, int mediaTypeId, String description, String status){
+        for(Content content : contents) {
+            if(content.getId() == id) {
+                int contentIndex = contents.indexOf(content);
+                content.setTitle(title);
+                content.setType(type);
+                content.setUserId(userId);
+                content.setMediaTypeId(mediaTypeId);
+                content.setDescription(description);
+                content.setStatus(status);
+                content.setUpdatedAt(new Date());
+                contents.set(contentIndex, content);
+                return content;
+            }
+        }
+        return null;
+    }
+
+    public boolean deleteContent(int id){
+        int contentIndex = -1;
+        for(Content content : contents) {
+            if (content.getId() == id) {
+                contentIndex = contents.indexOf(content);
+                break;
+            }
+        }
+        if(contentIndex > -1) {
+            contents.remove(contentIndex);
+        }
+        return true;
+    }
+
 }

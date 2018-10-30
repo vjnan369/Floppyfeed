@@ -1,8 +1,9 @@
 package project.services;
 
 import project.model.Content;
-import project.utility.ContentInfo;
+import project.repository.ContentInfo;
 
+import java.util.Date;
 import java.util.List;
 
 public class ManageContentServiceImpl implements ManageContentService {
@@ -13,5 +14,21 @@ public class ManageContentServiceImpl implements ManageContentService {
 
     public List<Content> fetchAllContent() {
         return contentInfo.fetchAllContent();
+    }
+
+    public Content createContent(int id, String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
+        return contentInfo.createContent(id, type, title, userId, mediaTypeId, description, status, publishedAt, createdAt, updatedAt);
+    }
+
+    public List<Content> searchContent(String searchText){
+        return contentInfo.searchContent(searchText);
+    }
+
+    public Content updateContent(int id, String type, String title, int userId, int mediaTypeId, String description, String status) {
+        return contentInfo.updateContent(id, type, title, userId, mediaTypeId, description, status);
+    }
+
+    public boolean deleteContent(int id) {
+        return contentInfo.deleteContent(id);
     }
 }
