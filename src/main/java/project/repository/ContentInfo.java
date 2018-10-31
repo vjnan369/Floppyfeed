@@ -2,11 +2,15 @@ package project.repository;
 
 import project.model.Content;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
 
 public class ContentInfo {
     List<Content> contents;
     int generateId = 0;
+
     public ContentInfo() {
         contents = new ArrayList<>();
         contents.add(new Content(1, "fictional", "Percy jackson and sea of monsters",

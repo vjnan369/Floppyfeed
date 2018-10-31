@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class ManageContentServiceImpl implements ManageContentService {
-    private ContentInfo contentInfo =  new ContentInfo();
+    private ContentInfo contentInfo = new ContentInfo();
 
     //Returns content which having given content id
     public Optional<Content> getContentById(int id) {
@@ -26,7 +26,7 @@ public class ManageContentServiceImpl implements ManageContentService {
     }
 
     // returns list contents which having given searchtext
-    public List<Content> searchContent(String searchText){
+    public List<Content> searchContent(String searchText) {
         return contentInfo.searchContent(searchText);
     }
 

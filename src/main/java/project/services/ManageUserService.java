@@ -7,8 +7,12 @@ import java.util.Optional;
 
 public interface ManageUserService {
     User createUser(String firstName, String lastName, String phoneNumber);
+
     boolean updateUserProfile(int id, String firstName, String lastName, String phoneNumber);
+
     boolean deleteUser(int id);
+
     Optional<User> getUserById(int id);
+
     List<User> getAllUsers();
 }

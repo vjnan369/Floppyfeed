@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0aa07607-1d1e-4984-ab20-75df5dba38d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/repository/ContentInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/repository/ContentInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/repository/MessagesInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/repository/MessagesInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/repository/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/repository/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/services/ManageContentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageContentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/services/ManageContentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageContentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/services/ManageMessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageMessageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/services/ManageMessagesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageMessagesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/services/ManageUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/services/ManageUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/project/services/ManageMessageServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project/services/ManageMessageServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/project/services/ManageUserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project/services/ManageUserServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/services/ManageUserAuthorityService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/exceptions/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/repository/UserAuthenticationInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/repository/UserAuthenticationInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthenticationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthenticationServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,7 +42,7 @@
           <entry key="class" value="5" />
           <entry key="groovy" value="1" />
           <entry key="iml" value="2" />
-          <entry key="java" value="152" />
+          <entry key="java" value="159" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
@@ -58,7 +51,7 @@
           <entry key="CLASS" value="5" />
           <entry key="Groovy" value="1" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="152" />
+          <entry key="JAVA" value="159" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
@@ -66,14 +59,14 @@
         <counts>
           <entry key="dummy" value="149" />
           <entry key="groovy" value="1" />
-          <entry key="java" value="29207" />
+          <entry key="java" value="29941" />
           <entry key="xml" value="193" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="1" />
-          <entry key="JAVA" value="29207" />
+          <entry key="JAVA" value="29941" />
           <entry key="PLAIN_TEXT" value="149" />
           <entry key="XML" value="193" />
         </counts>
@@ -87,37 +80,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
               <caret line="34" column="40" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="40" />
-              <folding>
-                <element signature="e#316#317#0" expanded="true" />
-                <element signature="e#369#370#0" expanded="true" />
-                <element signature="e#418#419#0" expanded="true" />
-                <element signature="e#470#471#0" expanded="true" />
-                <element signature="e#846#847#0" expanded="true" />
-                <element signature="e#906#907#0" expanded="true" />
-                <element signature="e#1192#1193#0" expanded="true" />
-                <element signature="e#1244#1245#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageMessagesService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageMessageServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageUserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            <state relative-caret-position="404">
+              <caret line="38" column="41" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -142,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/repository/UserInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+            <state relative-caret-position="278">
+              <caret line="59" column="14" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -163,10 +134,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/project/services/ManageUserServiceImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
+            <state relative-caret-position="-128">
               <caret line="67" column="68" selection-start-line="67" selection-start-column="68" selection-end-line="67" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -175,25 +146,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/repository/ContentInfo.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthenticationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="111" column="26" lean-forward="true" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
+            <state relative-caret-position="171">
+              <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthenticationServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3729#3730#0" expanded="true" />
-                <element signature="e#3760#3761#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
+                <element signature="e#601#602#0" expanded="true" />
+                <element signature="e#1215#1216#0" expanded="true" />
+                <element signature="e#1259#1260#0" expanded="true" />
+                <element signature="e#1373#1374#0" expanded="true" />
+                <element signature="e#1394#1395#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageMessageServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/repository/UserAuthenticationInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="38" column="41" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="41" />
+            <state relative-caret-position="205">
+              <caret line="74" column="18" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -202,10 +186,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/repository/MessagesInfo.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageContentService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="91" column="21" selection-start-line="91" selection-start-column="21" selection-end-line="91" selection-end-column="21" />
+            <state relative-caret-position="247">
+              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -280,10 +264,7 @@
         <option value="$PROJECT_DIR$/src/main/java/project/model/UserAuthentication.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/exceptions/TokenExpiryException.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/exceptions/TokenValidationException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthenticationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/utility/ResponseObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthenticationServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/repository/UserAuthenticationInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/exceptions/ResourceNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/repository/ContentInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/services/ManageContentServiceImpl.java" />
@@ -296,6 +277,9 @@
         <option value="$PROJECT_DIR$/src/main/java/project/repository/UserInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/services/ManageUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/project/services/ManageUserServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/repository/UserAuthenticationInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthenticationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthenticationService.java" />
       </list>
     </option>
   </component>
@@ -435,7 +419,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540986599324" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540990378377" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -579,9 +563,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ManageUserServiceImplTest_getUserById - 2018.10.30 at 15h 53m 10s.xml">
-      <configuration name="ManageUserServiceImplTest.getUserById" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ManageUserServiceImplTest_getAllUsers - 2018.10.30 at 15h 56m 37s.xml">
       <configuration name="ManageUserServiceImplTest.getAllUsers" configurationId="JUnit" />
     </history-entry>
@@ -609,6 +590,9 @@
     <history-entry file="ManageMessageServiceImplTest_updateMessage - 2018.10.31 at 17h 01m 30s.xml">
       <configuration name="ManageMessageServiceImplTest.updateMessage" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ManageUserServiceImplTest_updateUserProfile - 2018.10.31 at 17h 20m 02s.xml">
+      <configuration name="ManageUserServiceImplTest.updateUserProfile" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -623,7 +607,7 @@
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3366641" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27286702" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -632,7 +616,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.032983508" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.09595203" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.13793103" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34932533" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -831,26 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthenticationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/repository/UserAuthenticationInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="97" column="37" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/exceptions/TokenValidationException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -880,26 +844,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/exceptions/ResourceNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="56" selection-start-line="2" selection-start-column="56" selection-end-line="2" selection-end-column="56" />
-          <folding>
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#312#313#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthenticationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/project/services/ManageContentServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -910,51 +854,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageContentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageContentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="34" column="40" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="40" />
-          <folding>
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
-            <element signature="e#906#907#0" expanded="true" />
-            <element signature="e#1192#1193#0" expanded="true" />
-            <element signature="e#1244#1245#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/repository/ContentInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
-          <caret line="111" column="26" lean-forward="true" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
+          <caret line="111" column="26" selection-start-line="111" selection-start-column="26" selection-end-line="111" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3729#3730#0" expanded="true" />
             <element signature="e#3760#3761#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageMessageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="38" column="41" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1001,16 +908,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/repository/UserInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/project/services/ManageMessageServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -1023,11 +920,88 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/project/services/ManageUserServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
+        <state relative-caret-position="-128">
           <caret line="67" column="68" selection-start-line="67" selection-start-column="68" selection-end-line="67" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/exceptions/ResourceNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageContentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageContentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="34" column="40" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageMessageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="38" column="41" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/repository/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="59" column="14" lean-forward="true" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthenticationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1259#1260#0" expanded="true" />
+            <element signature="e#1373#1374#0" expanded="true" />
+            <element signature="e#1394#1395#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/repository/UserAuthenticationInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="74" column="18" selection-start-line="74" selection-start-column="18" selection-end-line="74" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthenticationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
         </state>
       </provider>
     </entry>
