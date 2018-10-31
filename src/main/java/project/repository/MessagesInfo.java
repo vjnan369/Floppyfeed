@@ -15,7 +15,7 @@ public class MessagesInfo {
     int generateId = 0;
 
     public MessagesInfo() {
-        messages = new ArrayList<Message>();
+        messages = new ArrayList<>();
         messages.add(new Message(1, 1, 1, "hello world, how are you!",
                 new Date(), new Date()));
         messages.add(new Message(2, 2, 2, "this is for second message!",

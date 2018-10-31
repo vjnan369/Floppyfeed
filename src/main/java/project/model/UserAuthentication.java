@@ -5,17 +5,17 @@ import java.util.Date;
 public class UserAuthentication {
     private int id;
     private int userId;
-    private String userName;
+    private String email;
     private String password;
     private String confirmationToken;
     private Date confirmedAt;
     private Date createdAt;
     private Date updatedAt;
 
-    public UserAuthentication(int id, int userId, String userName, String password, String confirmationToken, Date confirmedAt, Date createdAt, Date updatedAt) {
+    public UserAuthentication(int id, int userId, String email, String password, String confirmationToken, Date confirmedAt, Date createdAt, Date updatedAt) {
         this.id = id;
         this.userId = userId;
-        this.userName = userName;
+        this.email = email;
         this.password = password;
         this.confirmationToken = confirmationToken;
         this.confirmedAt = confirmedAt;
@@ -35,12 +35,12 @@ public class UserAuthentication {
         this.userId = userId;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setEmail(String userName) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -88,7 +88,7 @@ public class UserAuthentication {
         return "UserAuthentication{" +
                 "id=" + id +
                 ", userId=" + userId +
-                ", userName='" + userName + '\'' +
+                ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", confirmationToken='" + confirmationToken + '\'' +
                 ", confirmedAt=" + confirmedAt +
