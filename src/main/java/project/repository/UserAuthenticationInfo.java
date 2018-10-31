@@ -11,13 +11,13 @@ public class UserAuthenticationInfo {
     public UserAuthenticationInfo(){
         userAuthentications = new ArrayList<>();
         userAuthentications.add(
-                new UserAuthentication(1, 1, "jnan", "abcdefg", "asdfs-xiDrsdfS-RDFe", new Date(), new Date(), new Date())
+                new UserAuthentication(1, 1, "jnan@gmail.com", "abcdefg", "asdfs-xiDrsdfS-RDFe", new Date(), new Date(), new Date())
         );
         userAuthentications.add(
-                new UserAuthentication(2, 2, "samarth", "samsingh123", "asdfrs-xiDrswrssdfdfS-sdfRDFe", new Date(), new Date(), new Date())
+                new UserAuthentication(2, 2, "samarth@gmail.com", "samsingh123", "asdfrs-xiDrswrssdfdfS-sdfRDFe", new Date(), new Date(), new Date())
         );
         userAuthentications.add(
-                new UserAuthentication(3, 3, "ankit", "ankit12345", "asdfDsrds-xisdfrDrsdfS-RDFe", new Date(), new Date(), new Date())
+                new UserAuthentication(3, 3, "ankit@gmail.com", "ankit12345", "asdfDsrds-xisdfrDrsdfS-RDFe", new Date(), new Date(), new Date())
         );
     }
 
