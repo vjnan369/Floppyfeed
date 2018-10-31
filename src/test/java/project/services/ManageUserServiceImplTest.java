@@ -44,14 +44,14 @@ public class ManageUserServiceImplTest {
     // test cases for create user
     @ParameterizedTest
     @MethodSource("createUserTestData")
-    public void createUser(int id, String firstName, String lastName, String phoneNumber, User expectedResult) {
+    public void createUser(String firstName, String lastName, String phoneNumber, User expectedResult) {
         ManageUserServiceImpl manageUserService = new ManageUserServiceImpl();
-        assertTrue(expectedResult.equals(manageUserService.createUser(id, firstName, lastName, phoneNumber)));
+        assertTrue(expectedResult.equals(manageUserService.createUser(firstName, lastName, phoneNumber)));
     }
 
     static Stream<Arguments> createUserTestData() {
         return Stream.of(
-                Arguments.of(id, firstName, lastName, phoneNumber, user)
+                Arguments.of(firstName, lastName, phoneNumber, user)
         );
     }
 

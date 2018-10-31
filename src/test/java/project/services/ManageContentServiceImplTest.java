@@ -119,15 +119,15 @@ public class ManageContentServiceImplTest {
     // Test case for creatContent method
     @ParameterizedTest
     @MethodSource("createContentTestData")
-    public void createContent(int id, String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
+    public void createContent(String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
         ManageContentServiceImpl manageContentService = new ManageContentServiceImpl();
-        assertTrue(content.equals(manageContentService.createContent(id, type, title, userId, mediaTypeId, description, status, publishedAt, createdAt, updatedAt)));
+        assertTrue(content.equals(manageContentService.createContent(type, title, userId, mediaTypeId, description, status, publishedAt, createdAt, updatedAt)));
     }
 
 
     static Stream<Arguments> createContentTestData() {
         return Stream.of(
-                Arguments.of(id, type, title, userId, mediaTypeId, description, status, publishedAt, createdAt, updatedAt, content)
+                Arguments.of(type, title, userId, mediaTypeId, description, status, publishedAt, createdAt, updatedAt, content)
         );
     }
 

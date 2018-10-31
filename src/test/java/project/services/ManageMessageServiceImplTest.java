@@ -98,15 +98,15 @@ public class ManageMessageServiceImplTest {
     // Test case for create Message
     @ParameterizedTest
     @MethodSource("createMessageTestData")
-    public void createMessage(int id, int userId, int contentId, String description, Message expectedResult) {
+    public void createMessage(int userId, int contentId, String description, Message expectedResult) {
         ManageMessageServiceImpl manageMessageService = new ManageMessageServiceImpl();
-        assertTrue(expectedResult.equals(manageMessageService.createMessage(id, userId, contentId, description)));
+        assertTrue(expectedResult.equals(manageMessageService.createMessage(userId, contentId, description)));
     }
 
 
     static Stream<Arguments> createMessageTestData() {
         return Stream.of(
-                Arguments.of(id, userId, contentId, description, message)
+                Arguments.of(userId, contentId, description, message)
         );
     }
 

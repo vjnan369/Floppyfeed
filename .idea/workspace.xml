@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0aa07607-1d1e-4984-ab20-75df5dba38d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/model/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/model/Content.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/model/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/model/UserAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/model/UserAuthentication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/repository/ContentInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/repository/ContentInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/repository/MessagesInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/repository/MessagesInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/repository/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/repository/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/services/ManageContentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageContentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/services/ManageContentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageContentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/services/ManageMessageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageMessageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/services/ManageMessagesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageMessagesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/services/ManageUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/services/ManageUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthorityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthorityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/project/services/ManageContentServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project/services/ManageContentServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/project/services/ManageMessageServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project/services/ManageMessageServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/project/services/ManageUserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/project/services/ManageUserServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/repository/MockNeatGenerator.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -50,7 +42,7 @@
           <entry key="class" value="5" />
           <entry key="groovy" value="1" />
           <entry key="iml" value="2" />
-          <entry key="java" value="116" />
+          <entry key="java" value="120" />
           <entry key="xml" value="6" />
         </counts>
       </usages-collector>
@@ -59,7 +51,7 @@
           <entry key="CLASS" value="5" />
           <entry key="Groovy" value="1" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="116" />
+          <entry key="JAVA" value="120" />
           <entry key="XML" value="6" />
         </counts>
       </usages-collector>
@@ -86,23 +78,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageContentServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="20" column="40" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="40" />
+            <state relative-caret-position="156">
+              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
               <folding>
                 <element signature="e#316#317#0" expanded="true" />
                 <element signature="e#369#370#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageMessageServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="25" column="41" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,13 +100,63 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/repository/UserInfo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="241">
               <caret line="73" column="24" lean-forward="true" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/project/services/ManageContentServiceImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="129" column="29" selection-start-line="129" selection-start-column="29" selection-end-line="129" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/project/services/ManageMessageServiceImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/project/services/ManageUserServiceImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="54" column="10" lean-forward="true" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3899#3900#0" expanded="true" />
+                <element signature="e#3938#3939#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthorityServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-start-column="2" selection-end-line="6" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#262#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -163,43 +193,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageMessagesService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/model/Message.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-304">
-              <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/repository/ContentInfo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="399">
               <caret line="80" column="57" selection-start-line="80" selection-start-column="57" selection-end-line="80" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageContentService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -266,15 +263,11 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/project/services/ManageAuthoriyServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/repository/UsersInfo.java" />
-        <option value="$PROJECT_DIR$/src/test/java/project/services/ManageContentServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/project/services/ManageMessageServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/project/services/ManageUserServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/UserAuthority.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/services/ManageAuthorityService.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/services/ManageAuthorityServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/repository/UserAuthorityInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/repository/UserAuthenticationInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthorityServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/Message.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/Content.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/model/User.java" />
@@ -288,6 +281,10 @@
         <option value="$PROJECT_DIR$/src/main/java/project/repository/UserInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/services/ManageUserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/services/ManageUserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthorityServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/project/services/ManageUserServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/project/services/ManageMessageServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/project/services/ManageContentServiceImplTest.java" />
       </list>
     </option>
   </component>
@@ -418,7 +415,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540964329136" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540964828884" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
@@ -456,7 +453,65 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ManageUserServiceImplTest.getAllUsers">
+  <component name="RunManager" selected="JUnit.ManageContentServiceImplTest">
+    <configuration name="ManageContentServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="newfloppyfeed" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="project.services" />
+      <option name="MAIN_CLASS_NAME" value="project.services.ManageContentServiceImplTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManageMessageServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="newfloppyfeed" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="project.services" />
+      <option name="MAIN_CLASS_NAME" value="project.services.ManageMessageServiceImplTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManageMessageServiceImplTest.createMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="newfloppyfeed" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="project.services" />
+      <option name="MAIN_CLASS_NAME" value="project.services.ManageMessageServiceImplTest" />
+      <option name="METHOD_NAME" value="createMessage(int,int,java.lang.String,project.model.Message)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManageUserServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="newfloppyfeed" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="project.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="project.services" />
+      <option name="MAIN_CLASS_NAME" value="project.services.ManageUserServiceImplTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ManageUserServiceImplTest.createUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="newfloppyfeed" />
       <extension name="coverage">
@@ -467,90 +522,26 @@
       </extension>
       <option name="PACKAGE_NAME" value="project.services" />
       <option name="MAIN_CLASS_NAME" value="project.services.ManageUserServiceImplTest" />
-      <option name="METHOD_NAME" value="createUser(int,java.lang.String,java.lang.String,java.lang.String,project.model.User)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManageUserServiceImplTest.deleteUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="newfloppyfeed" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="project.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="project.services" />
-      <option name="MAIN_CLASS_NAME" value="project.services.ManageUserServiceImplTest" />
-      <option name="METHOD_NAME" value="deleteUser(int,boolean)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManageUserServiceImplTest.getAllUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="newfloppyfeed" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="project.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="project.services" />
-      <option name="MAIN_CLASS_NAME" value="project.services.ManageUserServiceImplTest" />
-      <option name="METHOD_NAME" value="getAllUsers(java.util.List)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManageUserServiceImplTest.getUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="newfloppyfeed" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="project.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="project.services" />
-      <option name="MAIN_CLASS_NAME" value="project.services.ManageUserServiceImplTest" />
-      <option name="METHOD_NAME" value="getUserById(int,project.model.User)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManageUserServiceImplTest.updateUserProfile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="newfloppyfeed" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="project.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="project.services" />
-      <option name="MAIN_CLASS_NAME" value="project.services.ManageUserServiceImplTest" />
-      <option name="METHOD_NAME" value="updateUserProfile(int,java.lang.String,java.lang.String,java.lang.String,project.model.User)" />
+      <option name="METHOD_NAME" value="createUser(java.lang.String,java.lang.String,java.lang.String,project.model.User)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.ManageMessageServiceImplTest.createMessage" />
       <item itemvalue="JUnit.ManageUserServiceImplTest.createUser" />
-      <item itemvalue="JUnit.ManageUserServiceImplTest.updateUserProfile" />
-      <item itemvalue="JUnit.ManageUserServiceImplTest.deleteUser" />
-      <item itemvalue="JUnit.ManageUserServiceImplTest.getUserById" />
-      <item itemvalue="JUnit.ManageUserServiceImplTest.getAllUsers" />
+      <item itemvalue="JUnit.ManageUserServiceImplTest" />
+      <item itemvalue="JUnit.ManageMessageServiceImplTest" />
+      <item itemvalue="JUnit.ManageContentServiceImplTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ManageUserServiceImplTest.getAllUsers" />
-        <item itemvalue="JUnit.ManageUserServiceImplTest.getUserById" />
-        <item itemvalue="JUnit.ManageUserServiceImplTest.deleteUser" />
-        <item itemvalue="JUnit.ManageUserServiceImplTest.updateUserProfile" />
+        <item itemvalue="JUnit.ManageContentServiceImplTest" />
+        <item itemvalue="JUnit.ManageMessageServiceImplTest" />
+        <item itemvalue="JUnit.ManageUserServiceImplTest" />
         <item itemvalue="JUnit.ManageUserServiceImplTest.createUser" />
+        <item itemvalue="JUnit.ManageMessageServiceImplTest.createMessage" />
       </list>
     </recent_temporary>
   </component>
@@ -568,21 +559,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ManageUserServiceImplTest_deleteUser - 2018.10.30 at 15h 42m 34s.xml">
-      <configuration name="ManageUserServiceImplTest.deleteUser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ManageUserServiceImplTest_deleteUser - 2018.10.30 at 15h 43m 15s.xml">
-      <configuration name="ManageUserServiceImplTest.deleteUser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ManageUserServiceImplTest_deleteUser - 2018.10.30 at 15h 43m 19s.xml">
-      <configuration name="ManageUserServiceImplTest.deleteUser" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ManageUserServiceImplTest_getUserById - 2018.10.30 at 15h 48m 25s.xml">
-      <configuration name="ManageUserServiceImplTest.getUserById" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ManageUserServiceImplTest_getUserById - 2018.10.30 at 15h 49m 13s.xml">
-      <configuration name="ManageUserServiceImplTest.getUserById" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ManageUserServiceImplTest_getUserById - 2018.10.30 at 15h 49m 15s.xml">
       <configuration name="ManageUserServiceImplTest.getUserById" configurationId="JUnit" />
     </history-entry>
@@ -598,6 +574,21 @@
     <history-entry file="ManageUserServiceImplTest_getAllUsers - 2018.10.30 at 15h 57m 47s.xml">
       <configuration name="ManageUserServiceImplTest.getAllUsers" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ManageUserServiceImplTest_createUser - 2018.10.31 at 11h 14m 59s.xml">
+      <configuration name="ManageUserServiceImplTest.createUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ManageUserServiceImplTest_createUser - 2018.10.31 at 11h 15m 48s.xml">
+      <configuration name="ManageUserServiceImplTest.createUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ManageUserServiceImplTest - 2018.10.31 at 11h 16m 20s.xml">
+      <configuration name="ManageUserServiceImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ManageMessageServiceImplTest - 2018.10.31 at 11h 16m 46s.xml">
+      <configuration name="ManageMessageServiceImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ManageMessageServiceImplTest - 2018.10.31 at 11h 16m 52s.xml">
+      <configuration name="ManageMessageServiceImplTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -612,7 +603,7 @@
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29054573" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24365872" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -620,8 +611,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.112443775" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3298351" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.112443775" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41079462" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34932533" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -629,7 +620,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4996016" weight="0.32972136" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5003984" side_tool="true" weight="0.32972136" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.13193403" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.2203898" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24980783" />
@@ -676,24 +667,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/project/services/ManageContentServiceImplTest.java</url>
-          <line>44</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/project/services/ManageContentServiceImplTest.java</url>
-          <line>55</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/project/services/ManageContentServiceImplTest.java</url>
-          <line>65</line>
-          <properties />
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/project/repository/MessagesInfo.java</url>
           <line>52</line>
@@ -811,16 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/project/services/ManageContentServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="114" column="20" selection-start-line="114" selection-start-column="8" selection-end-line="114" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/repository/MockNeatGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -832,35 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="8" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/project/services/ManageUserServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1793">
-          <caret line="100" column="32" lean-forward="true" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3899#3900#0" expanded="true" />
-            <element signature="e#3938#3939#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/project/services/ManageMessageServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthorityServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -919,17 +853,6 @@
           <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageContentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="20" column="40" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="40" />
-          <folding>
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1004,6 +927,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="73" column="24" lean-forward="true" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageUserAuthorityServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-start-column="2" selection-end-line="6" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/services/ManageContentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+          <folding>
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#369#370#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/project/services/ManageUserServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="54" column="10" lean-forward="true" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3899#3900#0" expanded="true" />
+            <element signature="e#3938#3939#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/project/services/ManageMessageServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/project/services/ManageContentServiceImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="129" column="29" selection-start-line="129" selection-start-column="29" selection-end-line="129" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
