@@ -9,7 +9,6 @@ public class User {
     private String phoneNumber;
     private Date createdAt;
     private Date updatedAt;
-    private Date lastSignedAt;
 
     public User(int id, String firstName, String lastName, String phoneNumber, Date createdAt, Date updatedAt){
         this.id = id;

@@ -18,46 +18,62 @@ public class UserInfo {
 
     public User createUser(int id, String firstName, String lastName, String phoneNumber) {
         User newUser = new User(id, firstName, lastName, phoneNumber, new Date(), new Date());
-        users.add(newUser);
-        return newUser;
+        try {
+            users.add(newUser);
+            return newUser;
+        } catch (NullPointerException e) {
+            return null;
+        }
     }
 
     public User updateUserProfile(int id, String firstName, String lastName, String phoneNumber) {
-        int userIndex = -1;
-        for (User user : users) {
-            if (user.getId() == id) {
-                userIndex = users.indexOf(user);
-                user.setFirstName(firstName);
-                user.setLastName(lastName);
-                user.setPhoneNumber(phoneNumber);
-                return users.set(userIndex, user);
+        int userIndex;
+        try {
+            for (User user : users) {
+                if (user.getId() == id) {
+                    userIndex = users.indexOf(user);
+                    user.setFirstName(firstName);
+                    user.setLastName(lastName);
+                    user.setPhoneNumber(phoneNumber);
+                    return users.set(userIndex, user);
+                }
             }
+            return null;
+        } catch (NullPointerException e) {
+            return null;
         }
-        return null;
     }
 
     public boolean deleteUser(int id) {
         int userIndex = -1;
-        for (User user : users) {
-            if (user.getId() == id) {
-                userIndex = users.indexOf(user);
-                break;
+        try {
+            for (User user : users) {
+                if (user.getId() == id) {
+                    userIndex = users.indexOf(user);
+                    break;
+                }
             }
+            if (userIndex > -1) {
+                users.remove(userIndex);
+                return true;
+            }
+            return false;
+        } catch (NullPointerException e) {
+            return false;
         }
-        if (userIndex > -1) {
-            users.remove(userIndex);
-            return true;
-        }
-        return false;
     }
 
     public User getUserById(int id) {
-        for (User user : users) {
-            if (user.getId() == id) {
-                return user;
+        try {
+            for (User user : users) {
+                if (user.getId() == id) {
+                    return user;
+                }
             }
+            return null;
+        } catch (NullPointerException e) {
+            return null;
         }
-        return null;
     }
 
     public List<User> getAllUsers() {

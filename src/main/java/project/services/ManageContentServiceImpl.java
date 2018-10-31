@@ -17,6 +17,7 @@ public class ManageContentServiceImpl implements ManageContentService {
     }
 
     public Content createContent(int id, String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
+
         return contentInfo.createContent(id, type, title, userId, mediaTypeId, description, status, publishedAt, createdAt, updatedAt);
     }
 
