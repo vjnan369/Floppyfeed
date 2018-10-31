@@ -12,6 +12,7 @@ import java.util.List;
 public class MessagesInfo {
 
     List<Message> messages;
+    int generateId = 0;
 
     public MessagesInfo() {
         messages = new ArrayList<Message>();
@@ -62,10 +63,10 @@ public class MessagesInfo {
         }
     }
 
-    public Message createMessage(int id, int userId, int contentId, String description) {
+    public Message createMessage(int userId, int contentId, String description) {
         Date createdAt = new Date();
         Date updatedAt = new Date();
-        Message newMessage = new Message(id, userId, contentId, description, createdAt, updatedAt);
+        Message newMessage = new Message(++generateId, userId, contentId, description, createdAt, updatedAt);
         try {
             messages.add(newMessage);
             return newMessage;

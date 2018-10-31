@@ -12,8 +12,8 @@ public class ManageUserServiceImpl implements ManageUserService {
         return userInfo.getUserById(id);
     }
 
-    public User createUser(int id, String firstName, String lastName, String phoneNumber) {
-        return userInfo.createUser(id, firstName, lastName, phoneNumber);
+    public User createUser(String firstName, String lastName, String phoneNumber) {
+        return userInfo.createUser(firstName, lastName, phoneNumber);
     }
 
     public User updateUserProfile(int id, String firstName, String lastName, String phoneNumber) {

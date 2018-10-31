@@ -8,6 +8,7 @@ import java.util.List;
 
 public class UserInfo {
     List<User> users;
+    int generateId = 0;
 
     public UserInfo() {
         users = new ArrayList<>();
@@ -16,8 +17,8 @@ public class UserInfo {
         users.add(new User(3, "ankit", "dudeja", "984744893", new Date(), new Date()));
     }
 
-    public User createUser(int id, String firstName, String lastName, String phoneNumber) {
-        User newUser = new User(id, firstName, lastName, phoneNumber, new Date(), new Date());
+    public User createUser(String firstName, String lastName, String phoneNumber) {
+        User newUser = new User(++generateId, firstName, lastName, phoneNumber, new Date(), new Date());
         try {
             users.add(newUser);
             return newUser;

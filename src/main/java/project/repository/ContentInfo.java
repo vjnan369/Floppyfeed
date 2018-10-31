@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ContentInfo {
     List<Content> contents;
-
+    int generateId = 0;
     public ContentInfo() {
         contents = new ArrayList<>();
         contents.add(new Content(1, "fictional", "Percy jackson and sea of monsters",
@@ -76,9 +76,9 @@ public class ContentInfo {
         return contents;
     }
 
-    public Content createContent(int id, String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
+    public Content createContent(String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
         try {
-            Content newContent = new Content(id, type, title, userId, mediaTypeId, description, status, publishedAt, createdAt, updatedAt);
+            Content newContent = new Content(++generateId, type, title, userId, mediaTypeId, description, status, publishedAt, createdAt, updatedAt);
             contents.add(newContent);
             return newContent;
         } catch (NullPointerException e) {

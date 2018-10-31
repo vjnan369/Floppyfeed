@@ -16,9 +16,9 @@ public class ManageContentServiceImpl implements ManageContentService {
         return contentInfo.fetchAllContent();
     }
 
-    public Content createContent(int id, String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
+    public Content createContent(String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
 
-        return contentInfo.createContent(id, type, title, userId, mediaTypeId, description, status, publishedAt, createdAt, updatedAt);
+        return contentInfo.createContent(type, title, userId, mediaTypeId, description, status, publishedAt, createdAt, updatedAt);
     }
 
     public List<Content> searchContent(String searchText){

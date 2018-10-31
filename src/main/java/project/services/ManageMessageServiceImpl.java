@@ -22,8 +22,8 @@ public class ManageMessageServiceImpl implements ManageMessagesService {
         return messagesInfo.getMessagesByUser(user);
     }
 
-    public Message createMessage(int id, int userId, int contentId, String description) {
-        return messagesInfo.createMessage(id, userId, contentId, description);
+    public Message createMessage(int userId, int contentId, String description) {
+        return messagesInfo.createMessage(userId, contentId, description);
     }
 
     public Message updateMessage(int id, int userId, int contentId, String description) {
