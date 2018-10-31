@@ -4,26 +4,32 @@ import project.model.User;
 import project.repository.UserInfo;
 
 import java.util.List;
+import java.util.Optional;
 
 public class ManageUserServiceImpl implements ManageUserService {
     private UserInfo userInfo = new UserInfo();
 
-    public User getUserById(int id) {
+    // returns user details for given userid
+    public Optional<User> getUserById(int id) {
         return userInfo.getUserById(id);
     }
 
+    // returns user details if user added successfully.
     public User createUser(String firstName, String lastName, String phoneNumber) {
         return userInfo.createUser(firstName, lastName, phoneNumber);
     }
 
-    public User updateUserProfile(int id, String firstName, String lastName, String phoneNumber) {
+    // returns true if user profile is updated successfully
+    public boolean updateUserProfile(int id, String firstName, String lastName, String phoneNumber) {
         return userInfo.updateUserProfile(id, firstName, lastName, phoneNumber);
     }
 
+    // returns true if user deleted successfully
     public boolean deleteUser(int id) {
         return userInfo.deleteUser(id);
     }
 
+    // returns list of all users
     public List<User> getAllUsers() {
         return userInfo.getAllUsers();
     }

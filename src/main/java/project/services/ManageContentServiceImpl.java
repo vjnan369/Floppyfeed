@@ -31,7 +31,7 @@ public class ManageContentServiceImpl implements ManageContentService {
     }
 
     // updates given content details
-    public Content updateContent(int id, String type, String title, int userId, int mediaTypeId, String description, String status) {
+    public boolean updateContent(int id, String type, String title, int userId, int mediaTypeId, String description, String status) {
         return contentInfo.updateContent(id, type, title, userId, mediaTypeId, description, status);
     }
 

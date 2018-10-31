@@ -5,6 +5,7 @@ import project.model.User;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 public class UserInfo {
     List<User> users;
@@ -19,62 +20,47 @@ public class UserInfo {
 
     public User createUser(String firstName, String lastName, String phoneNumber) {
         User newUser = new User(++generateId, firstName, lastName, phoneNumber, new Date(), new Date());
-        try {
-            users.add(newUser);
-            return newUser;
-        } catch (NullPointerException e) {
-            return null;
-        }
+        users.add(newUser);
+        return newUser;
     }
 
-    public User updateUserProfile(int id, String firstName, String lastName, String phoneNumber) {
+    public boolean updateUserProfile(int id, String firstName, String lastName, String phoneNumber) {
         int userIndex;
-        try {
-            for (User user : users) {
-                if (user.getId() == id) {
-                    userIndex = users.indexOf(user);
-                    user.setFirstName(firstName);
-                    user.setLastName(lastName);
-                    user.setPhoneNumber(phoneNumber);
-                    return users.set(userIndex, user);
-                }
+        for (User user : users) {
+            if (user.getId() == id) {
+                userIndex = users.indexOf(user);
+                user.setFirstName(firstName);
+                user.setLastName(lastName);
+                user.setPhoneNumber(phoneNumber);
+                users.set(userIndex, user);
+                return true;
             }
-            return null;
-        } catch (NullPointerException e) {
-            return null;
         }
+        return false;
     }
 
     public boolean deleteUser(int id) {
         int userIndex = -1;
-        try {
-            for (User user : users) {
-                if (user.getId() == id) {
-                    userIndex = users.indexOf(user);
-                    break;
-                }
+        for (User user : users) {
+            if (user.getId() == id) {
+                userIndex = users.indexOf(user);
+                break;
             }
-            if (userIndex > -1) {
-                users.remove(userIndex);
-                return true;
-            }
-            return false;
-        } catch (NullPointerException e) {
-            return false;
         }
+        if (userIndex > -1) {
+            users.remove(userIndex);
+            return true;
+        }
+        return false;
     }
 
-    public User getUserById(int id) {
-        try {
-            for (User user : users) {
-                if (user.getId() == id) {
-                    return user;
-                }
+    public Optional<User> getUserById(int id) {
+        for (User user : users) {
+            if (user.getId() == id) {
+                return Optional.of(user);
             }
-            return null;
-        } catch (NullPointerException e) {
-            return null;
         }
+        return Optional.empty();
     }
 
     public List<User> getAllUsers() {

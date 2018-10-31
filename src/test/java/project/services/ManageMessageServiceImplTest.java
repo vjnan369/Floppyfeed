@@ -65,32 +65,32 @@ public class ManageMessageServiceImplTest {
     // Test case for getMessagesByContent
     @ParameterizedTest
     @MethodSource("getMessagesByContentTestData")
-    public void getMessagesByContent(Content content, List<Message> expectedResult) {
+    public void getMessagesByContent(int contentId, List<Message> expectedResult) {
         ManageMessageServiceImpl manageMessageService = new ManageMessageServiceImpl();
-        assertTrue(expectedResult.equals(manageMessageService.getMessagesByContent(content)));
+        assertTrue(expectedResult.equals(manageMessageService.getMessagesByContentId(contentId)));
     }
 
     static Stream<Arguments> getMessagesByContentTestData() {
         List<Message> filteredMessages = new ArrayList<>();
         filteredMessages.add(message);
         return Stream.of(
-                Arguments.of(content, filteredMessages)
+                Arguments.of(1, filteredMessages)
         );
     }
 
     // Test case for getMessagesByUser
     @ParameterizedTest
     @MethodSource("getMessagesByIdTestData")
-    public void getMessagesByUser(User user, List<Message> expectedResult) {
+    public void getMessagesByUser(int userId, List<Message> expectedResult) {
         ManageMessageServiceImpl manageMessageService = new ManageMessageServiceImpl();
-        assertTrue(expectedResult.equals(manageMessageService.getMessagesByUser(user)));
+        assertTrue(expectedResult.equals(manageMessageService.getMessagesByUserId(userId)));
     }
 
     static Stream<Arguments> getMessagesByIdTestData() {
         List<Message> filteredMessages = new ArrayList<>();
         filteredMessages.add(message);
         return Stream.of(
-                Arguments.of(user, filteredMessages)
+                Arguments.of(1, filteredMessages)
         );
     }
 
@@ -114,14 +114,14 @@ public class ManageMessageServiceImplTest {
     //     Test case for update message
     @ParameterizedTest
     @MethodSource("updateMessageTestData")
-    public void updateMessage(int id, int userId, int contentId, String description, Message expectedResult) {
+    public void updateMessage(int id, int userId, int contentId, String description, boolean expectedResult) {
         ManageMessageServiceImpl manageMessageService = new ManageMessageServiceImpl();
-        assertTrue(expectedResult.equals(manageMessageService.updateMessage(id, userId, contentId, description)));
+        assertEquals(expectedResult, manageMessageService.updateMessage(id, userId, contentId, description));
     }
 
     static Stream<Arguments> updateMessageTestData() {
         return Stream.of(
-                Arguments.of(id, userId, contentId, description, message)
+                Arguments.of(id, userId, contentId, description, true)
         );
     }
 

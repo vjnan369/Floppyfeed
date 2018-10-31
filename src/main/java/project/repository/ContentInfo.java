@@ -70,50 +70,38 @@ public class ContentInfo {
     }
 
     public Content createContent(String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
-        try {
-            Content newContent = new Content(++generateId, type, title, userId, mediaTypeId, description, status, publishedAt, createdAt, updatedAt);
-            contents.add(newContent);
-            return newContent;
-        } catch (NullPointerException e) {
-            return null;
-        }
+        Content newContent = new Content(++generateId, type, title, userId, mediaTypeId, description, status, publishedAt, createdAt, updatedAt);
+        contents.add(newContent);
+        return newContent;
     }
 
     public List<Content> searchContent(String searchText) {
         List<Content> searchContents = new ArrayList<>();
-        try {
-            for (Content content : contents) {
-                if (content.getTitle().toLowerCase().contains(searchText.toLowerCase())
-                        || content.getDescription().toLowerCase().contains(searchText.toLowerCase())) {
-                    searchContents.add(content);
-                }
+        for (Content content : contents) {
+            if (content.getTitle().toLowerCase().contains(searchText.toLowerCase())
+                    || content.getDescription().toLowerCase().contains(searchText.toLowerCase())) {
+                searchContents.add(content);
             }
-            return searchContents;
-        } catch (NullPointerException e) {
-            return Collections.EMPTY_LIST;
         }
+        return searchContents;
     }
 
-    public Content updateContent(int id, String type, String title, int userId, int mediaTypeId, String description, String status) {
-        try {
-            for (Content content : contents) {
-                if (content.getId() == id) {
-                    int contentIndex = contents.indexOf(content);
-                    content.setTitle(title);
-                    content.setType(type);
-                    content.setUserId(userId);
-                    content.setMediaTypeId(mediaTypeId);
-                    content.setDescription(description);
-                    content.setStatus(status);
-                    content.setUpdatedAt(new Date());
-                    contents.set(contentIndex, content);
-                    return content;
-                }
+    public boolean updateContent(int id, String type, String title, int userId, int mediaTypeId, String description, String status) {
+        for (Content content : contents) {
+            if (content.getId() == id) {
+                int contentIndex = contents.indexOf(content);
+                content.setTitle(title);
+                content.setType(type);
+                content.setUserId(userId);
+                content.setMediaTypeId(mediaTypeId);
+                content.setDescription(description);
+                content.setStatus(status);
+                content.setUpdatedAt(new Date());
+                contents.set(contentIndex, content);
+                return true;
             }
-            return null;
-        } catch (NullPointerException e) {
-            return null;
         }
+        return false;
     }
 
     public boolean deleteContent(int id) {

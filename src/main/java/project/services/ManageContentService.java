@@ -11,6 +11,6 @@ public interface ManageContentService {
     List<Content> fetchAllContent();
     Content createContent(String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt);
     List<Content> searchContent(String searchText);
-    Content updateContent(int id, String type, String title, int userId, int mediaTypeId, String description, String status);
+    boolean updateContent(int id, String type, String title, int userId, int mediaTypeId, String description, String status);
     boolean deleteContent(int id);
 }

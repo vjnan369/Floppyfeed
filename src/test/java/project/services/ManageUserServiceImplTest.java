@@ -58,14 +58,14 @@ public class ManageUserServiceImplTest {
     // test cases for update user profile
     @ParameterizedTest
     @MethodSource("updateUserProfileTestData")
-    public void updateUserProfile(int id, String firstName, String lastName, String phoneNumber, User expectedResult) {
+    public void updateUserProfile(int id, String firstName, String lastName, String phoneNumber, boolean expectedResult) {
         ManageUserService manageUserService = new ManageUserServiceImpl();
-        assertTrue(expectedResult.equals(manageUserService.updateUserProfile(id, firstName, lastName, phoneNumber)));
+        assertEquals(expectedResult, manageUserService.updateUserProfile(id, firstName, lastName, phoneNumber));
     }
 
     static Stream<Arguments> updateUserProfileTestData() {
         return Stream.of(
-                Arguments.of(1, "sahu", "rajiv", "9836363322", new User(1, "sahu", "rajiv", "9836363322", new Date(), new Date()))
+                Arguments.of(1, "sahu", "rajiv", "9836363322", true)
         );
     }
 
