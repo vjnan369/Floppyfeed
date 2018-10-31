@@ -2,10 +2,7 @@ package project.repository;
 
 import project.model.Content;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class ContentInfo {
     List<Content> contents;
@@ -59,17 +56,13 @@ public class ContentInfo {
         ));
     }
 
-    public Content getContentById(int id) {
-        try {
-            for (Content content : contents) {
-                if (content.getId() == id) {
-                    return content;
-                }
+    public Optional<Content> getContentById(int id) {
+        for (Content content : contents) {
+            if (content.getId() == id) {
+                return Optional.of(content);
             }
-            return null;
-        } catch (NullPointerException e) {
-            return null;
         }
+        return Optional.empty();
     }
 
     public List<Content> fetchAllContent() {

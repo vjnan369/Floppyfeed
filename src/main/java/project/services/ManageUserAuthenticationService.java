@@ -1,10 +1,12 @@
 package project.services;
 
+import project.utility.ResponseObject;
+
 public interface ManageUserAuthenticationService {
-    boolean createAuthentication(int id, int userId, String userName, String password, String confirmationToken);
-    boolean updateAuthentication(int id, String userName, String password);
-    boolean deleteAuthentication(int id);
-    boolean createConfirmationToken();
-    boolean confirmToken(String token);
-    boolean updateConfirmationToken(int id);
+    ResponseObject confirmToken(String token);
+//    boolean createAuthentication(int userId, String userName, String password, String confirmationToken);
+//    boolean updateAuthentication(int id, String userName, String password);
+//    boolean deleteAuthentication(int id);
+//    boolean createConfirmationToken();
+//    boolean updateConfirmationToken(int id);
 }

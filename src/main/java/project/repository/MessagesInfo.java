@@ -73,7 +73,6 @@ public class MessagesInfo {
         } catch (NullPointerException e) {
             return null;
         }
-
     }
 
     public Message updateMessage(int id, int userId, int contentId, String description) {
