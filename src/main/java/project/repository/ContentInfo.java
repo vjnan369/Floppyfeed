@@ -2,10 +2,7 @@ package project.repository;
 
 import project.model.Content;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class ContentInfo {
     List<Content> contents;
@@ -61,51 +58,67 @@ public class ContentInfo {
     }
 
     public Optional<Content> getContentById(int id) {
-        for (Content content : contents) {
-            if (content.getId() == id) {
-                return Optional.of(content);
+        try{
+            for (Content content : contents) {
+                if (content.getId() == id) {
+                    return Optional.of(content);
+                }
             }
+            return Optional.empty();
+        } catch (NullPointerException e){
+            return Optional.empty();
         }
-        return Optional.empty();
     }
 
     public List<Content> fetchAllContent() {
         return contents;
     }
 
-    public Content createContent(String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
-        Content newContent = new Content(++generateId, type, title, userId, mediaTypeId, description, status, publishedAt, createdAt, updatedAt);
-        contents.add(newContent);
-        return newContent;
+    public Optional<Content> createContent(String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
+        try {
+            Content newContent = new Content(++generateId, type, title, userId, mediaTypeId, description, status, publishedAt, createdAt, updatedAt);
+            contents.add(newContent);
+            return Optional.of(newContent);
+        } catch (NullPointerException e){
+            return Optional.empty();
+        }
     }
 
     public List<Content> searchContent(String searchText) {
-        List<Content> searchContents = new ArrayList<>();
-        for (Content content : contents) {
-            if (content.getTitle().toLowerCase().contains(searchText.toLowerCase())
-                    || content.getDescription().toLowerCase().contains(searchText.toLowerCase())) {
-                searchContents.add(content);
+        try {
+            List<Content> searchContents = new ArrayList<>();
+            for (Content content : contents) {
+                if (content.getTitle().toLowerCase().contains(searchText.toLowerCase())
+                        || content.getDescription().toLowerCase().contains(searchText.toLowerCase())) {
+                    searchContents.add(content);
+                }
             }
+            return searchContents;
+        } catch (NullPointerException e){
+            return Collections.emptyList();
         }
-        return searchContents;
     }
 
     public boolean updateContent(int id, String type, String title, int userId, int mediaTypeId, String description, String status) {
-        for (Content content : contents) {
-            if (content.getId() == id) {
-                int contentIndex = contents.indexOf(content);
-                content.setTitle(title);
-                content.setType(type);
-                content.setUserId(userId);
-                content.setMediaTypeId(mediaTypeId);
-                content.setDescription(description);
-                content.setStatus(status);
-                content.setUpdatedAt(new Date());
-                contents.set(contentIndex, content);
-                return true;
+        try {
+            for (Content content : contents) {
+                if (content.getId() == id) {
+                    int contentIndex = contents.indexOf(content);
+                    content.setTitle(title);
+                    content.setType(type);
+                    content.setUserId(userId);
+                    content.setMediaTypeId(mediaTypeId);
+                    content.setDescription(description);
+                    content.setStatus(status);
+                    content.setUpdatedAt(new Date());
+                    contents.set(contentIndex, content);
+                    return true;
+                }
             }
+            return false;
+        }catch (NullPointerException e){
+            return false;
         }
-        return false;
     }
 
     public boolean deleteContent(int id) {

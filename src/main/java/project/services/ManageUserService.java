@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ManageUserService {
-    User createUser(String firstName, String lastName, String phoneNumber);
+    Optional<User> createUser(String firstName, String lastName, String phoneNumber);
 
     boolean updateUserProfile(int id, String firstName, String lastName, String phoneNumber);
 

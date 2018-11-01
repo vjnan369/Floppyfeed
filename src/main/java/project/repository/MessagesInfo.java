@@ -18,12 +18,16 @@ public class MessagesInfo {
     }
 
     public Optional<Message> getMessageById(int id) {
-        for (Message message : messages) {
-            if (message.getId() == id) {
-                return Optional.of(message);
+        try {
+            for (Message message : messages) {
+                if (message.getId() == id) {
+                    return Optional.of(message);
+                }
             }
+            return Optional.empty();
+        } catch (NullPointerException e){
+            return Optional.empty();
         }
-        return Optional.empty();
     }
 
     public List<Message> getMessagesByContentId(int contentId) {
@@ -63,32 +67,40 @@ public class MessagesInfo {
     }
 
     public boolean updateMessage(int id, int userId, int contentId, String description) {
-        for (Message message : messages) {
-            if (message.getId() == id) {
-                int messageIndex = messages.indexOf(message);
-                message.setUserId(userId);
-                message.setContentId(contentId);
-                message.setDescription(description);
-                message.setUpdatedAt(new Date());
-                messages.set(messageIndex, message);
-                return true;
+        try{
+            for (Message message : messages) {
+                if (message.getId() == id) {
+                    int messageIndex = messages.indexOf(message);
+                    message.setUserId(userId);
+                    message.setContentId(contentId);
+                    message.setDescription(description);
+                    message.setUpdatedAt(new Date());
+                    messages.set(messageIndex, message);
+                    return true;
+                }
             }
+            return false;
+        } catch (NullPointerException e){
+            return false;
         }
-        return false;
     }
 
     public boolean deleteMessage(int id) {
         int messageIndex = -1;
-        for (Message message : messages) {
-            if (message.getId() == id) {
-                messageIndex = messages.indexOf(message);
-                break;
+        try {
+            for (Message message : messages) {
+                if (message.getId() == id) {
+                    messageIndex = messages.indexOf(message);
+                    break;
+                }
             }
+            if (messageIndex > -1) {
+                messages.remove(messageIndex);
+                return true;
+            }
+            return false;
+        } catch (NullPointerException e){
+            return false;
         }
-        if (messageIndex > -1) {
-            messages.remove(messageIndex);
-            return true;
-        }
-        return false;
     }
 }

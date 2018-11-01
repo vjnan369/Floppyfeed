@@ -15,7 +15,7 @@ public class ManageUserServiceImpl implements ManageUserService {
     }
 
     // returns user details if user added successfully.
-    public User createUser(String firstName, String lastName, String phoneNumber) {
+    public Optional<User> createUser(String firstName, String lastName, String phoneNumber) {
         return userInfo.createUser(firstName, lastName, phoneNumber);
     }
 
