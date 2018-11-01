@@ -10,6 +10,7 @@ import project.model.User;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -46,7 +47,7 @@ public class ManageUserServiceImplTest {
     @MethodSource("createUserTestData")
     public void createUser(String firstName, String lastName, String phoneNumber, User expectedResult) {
         ManageUserServiceImpl manageUserService = new ManageUserServiceImpl();
-        assertTrue(expectedResult.equals(manageUserService.createUser(firstName, lastName, phoneNumber)));
+        assertTrue(Optional.of(expectedResult).equals(manageUserService.createUser(firstName, lastName, phoneNumber)));
     }
 
     static Stream<Arguments> createUserTestData() {
@@ -65,7 +66,8 @@ public class ManageUserServiceImplTest {
 
     static Stream<Arguments> updateUserProfileTestData() {
         return Stream.of(
-                Arguments.of(1, "sahu", "rajiv", "9836363322", true)
+                Arguments.of(1, "sahu", "rajiv", "9836363322", true),
+                Arguments.of(-1, "sahu", "rajiv", "9836363322", false)
         );
     }
 
@@ -80,21 +82,23 @@ public class ManageUserServiceImplTest {
     static Stream<Arguments> deleteUserTestData() {
         return Stream.of(
                 Arguments.of(1, true),
-                Arguments.of(2, true)
+                Arguments.of(2, true),
+                Arguments.of(-100, false)
         );
     }
 
     // Test case for getUserById
     @ParameterizedTest
     @MethodSource("getUserByIdTestData")
-    public void getUserById(int id, User expectedResult) {
+    public void getUserById(int id, Optional<User> expectedResult) {
         ManageUserService manageUserService = new ManageUserServiceImpl();
         assertTrue(expectedResult.equals(manageUserService.getUserById(id)));
     }
 
     static Stream<Arguments> getUserByIdTestData() {
         return Stream.of(
-                Arguments.of(1, user)
+                Arguments.of(1, Optional.of(user)),
+                Arguments.of(-1, Optional.empty())
         );
     }
 
