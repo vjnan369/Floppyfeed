@@ -10,6 +10,14 @@ import java.util.Optional;
 public class ManageContentServiceImpl implements ManageContentService {
     private ContentInfo contentInfo = new ContentInfo();
 
+    private static ManageContentServiceImpl instance = null;
+    public static ManageContentServiceImpl getInstance(){
+        if(instance == null){
+            instance = new ManageContentServiceImpl();
+        }
+        return instance;
+    }
+
     //Returns content which having given content id
     public Optional<Content> getContentById(int id) {
         return contentInfo.getContentById(id);
