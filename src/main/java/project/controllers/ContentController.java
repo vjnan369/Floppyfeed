@@ -1,13 +1,12 @@
 package project.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import project.model.Content;
 import project.services.ManageContentService;
 import project.services.ManageContentServiceImpl;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -25,4 +24,9 @@ public class ContentController {
         System.out.println(contentId);
         return manageContentService.getContentById(contentId);
     }
+
+//    @PostMapping("/content")
+//    public Content create(@RequestBody Map<String, String> body){
+//
+//    }
 }
