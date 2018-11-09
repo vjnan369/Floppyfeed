@@ -1,9 +1,15 @@
 package project.model;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name="content")
 public class Content {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
     private String type;
     private String title;
     private int userId;
@@ -11,8 +17,26 @@ public class Content {
     private String description;
     private String status;
     private Date publishedAt;
+
+    @JoinColumn(name="created_at")
     private Date createdAt;
+
     private Date updatedAt;
+
+    public Content(){
+
+    }
+    public Content(String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
+        this.type = type;
+        this.title = title;
+        this.userId = userId;
+        this.mediaTypeId = mediaTypeId;
+        this.description = description;
+        this.status = status;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.publishedAt = publishedAt;
+    }
 
     public Content(int id, String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
         this.id = id;

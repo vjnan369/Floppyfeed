@@ -10,7 +10,7 @@ public class User {
     private Date createdAt;
     private Date updatedAt;
 
-    public User(int id, String firstName, String lastName, String phoneNumber, Date createdAt, Date updatedAt){
+    public User(int id, String firstName, String lastName, String phoneNumber, Date createdAt, Date updatedAt) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;

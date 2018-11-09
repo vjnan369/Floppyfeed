@@ -2,13 +2,15 @@ package project.services;
 
 import project.model.User;
 import project.repository.UserInfo;
+import project.repository.UserRepository;
 
 import java.util.List;
 import java.util.Optional;
 
 public class ManageUserServiceImpl implements ManageUserService {
-    private UserInfo userInfo = new UserInfo();
-
+//    private UserInfo userInfo = new UserInfo();
+    private UserRepository userRepository = new UserRepository();
+    private
     // returns user details for given userid
     public Optional<User> getUserById(int id) {
         return userInfo.getUserById(id);
