@@ -1,37 +1,66 @@
 package project.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import project.model.User;
-import project.repository.UserInfo;
+import project.model.UserAuthentication;
+import project.repository.UserAuthenticationRepository;
 import project.repository.UserRepository;
 
+import javax.transaction.Transactional;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class ManageUserServiceImpl implements ManageUserService {
-    private UserInfo userInfo = new UserInfo();
-//    private UserRepository userRepository = new UserRepository();
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private UserAuthenticationRepository userAuthenticationRepository;
+
+    //    private UserInfo userInfo = new UserInfo();
     // returns user details for given userid
-    public Optional<User> getUserById(int id) {
-        return userInfo.getUserById(id);
+    public User getUserById(int id) {
+        return userRepository.findOne(id);
     }
 
     // returns user details if user added successfully.
-    public Optional<User> createUser(String firstName, String lastName, String phoneNumber) {
-        return userInfo.createUser(firstName, lastName, phoneNumber);
+    @Transactional
+    public Optional<User> createUser(String firstName, String lastName, String phoneNumber, String email, String password) {
+        Date createdAt = new Date();
+        Date updatedAt = new Date();
+        User newUser = new User(firstName, lastName, phoneNumber, createdAt, updatedAt);
+        User savedUser = userRepository.save(newUser);
+        int userId = savedUser.getId();
+        UserAuthentication newUserAuthentication = new UserAuthentication(userId, email, password, null, null, createdAt, updatedAt);
+        userAuthenticationRepository.save(newUserAuthentication);
+        return Optional.of(newUser);
     }
 
     // returns true if user profile is updated successfully
     public boolean updateUserProfile(int id, String firstName, String lastName, String phoneNumber) {
-        return userInfo.updateUserProfile(id, firstName, lastName, phoneNumber);
+        User user = userRepository.findOne(id);
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        user.setPhoneNumber(phoneNumber);
+        userRepository.save(user);
+        return true;
     }
 
     // returns true if user deleted successfully
     public boolean deleteUser(int id) {
-        return userInfo.deleteUser(id);
+        try {
+            userRepository.delete(id);
+            return true;
+        } catch (NullPointerException e) {
+            return false;
+        }
     }
 
     // returns list of all users
     public List<User> getAllUsers() {
-        return userInfo.getAllUsers();
+        return userRepository.findAll();
     }
 }

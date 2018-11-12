@@ -24,6 +24,8 @@ public class ManageUserServiceImplTest {
     static Date createdAt;
     static Date updatedAt;
     static User user;
+    static String email;
+    static String password;
     static List<User> users;
 
     //Initialize all variables
@@ -47,7 +49,7 @@ public class ManageUserServiceImplTest {
     @MethodSource("createUserTestData")
     public void createUser(String firstName, String lastName, String phoneNumber, User expectedResult) {
         ManageUserServiceImpl manageUserService = new ManageUserServiceImpl();
-        assertTrue(Optional.of(expectedResult).equals(manageUserService.createUser(firstName, lastName, phoneNumber)));
+        assertTrue(Optional.of(expectedResult).equals(manageUserService.createUser(firstName, lastName, phoneNumber, email, password)));
     }
 
     static Stream<Arguments> createUserTestData() {
