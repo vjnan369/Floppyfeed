@@ -8,9 +8,8 @@ import java.util.List;
 import java.util.Optional;
 
 public class ManageUserServiceImpl implements ManageUserService {
-//    private UserInfo userInfo = new UserInfo();
-    private UserRepository userRepository = new UserRepository();
-    private
+    private UserInfo userInfo = new UserInfo();
+//    private UserRepository userRepository = new UserRepository();
     // returns user details for given userid
     public Optional<User> getUserById(int id) {
         return userInfo.getUserById(id);

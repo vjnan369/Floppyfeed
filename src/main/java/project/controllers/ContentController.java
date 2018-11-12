@@ -15,7 +15,7 @@ public class ContentController {
     @Autowired(required = true)
     private ManageContentService manageContentService;
 
-    @GetMapping("/content")
+    @GetMapping("/contents")
     public List<Content> index(){
         return manageContentService.fetchAllContent();
     }
@@ -50,7 +50,7 @@ public class ContentController {
         String title = body.get("title");
         String description = body.get("description");
         String status = body.get("status");
-        int userId = 1; //TODO implement spring security to get userId
+        int userId = 3; //TODO implement spring security to get userId
         int mediaTypeId = 1; //TODO fetch media type id
         return manageContentService.updateContent(id, type, title, userId, mediaTypeId, description, status);
     }
