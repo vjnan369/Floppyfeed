@@ -49,6 +49,10 @@ public class ManageUserServiceImpl implements ManageUserService {
         return true;
     }
 
+    public UserAuthentication getUserByEmail(String email){
+        return userAuthenticationRepository.findByEmail(email);
+    }
+
     // returns true if user deleted successfully
     public boolean deleteUser(int id) {
         try {

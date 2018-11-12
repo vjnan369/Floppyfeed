@@ -1,6 +1,7 @@
 package project.services;
 
 import project.model.User;
+import project.model.UserAuthentication;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,6 +14,8 @@ public interface ManageUserService {
     boolean deleteUser(int id);
 
     User getUserById(int id);
+
+    UserAuthentication getUserByEmail(String email);
 
     List<User> getAllUsers();
 }
