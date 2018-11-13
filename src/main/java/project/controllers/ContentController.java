@@ -1,10 +1,14 @@
 package project.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
+import project.exceptions.ContentException;
 import project.model.Content;
 import project.services.ManageContentService;
+import project.utility.UserDetails;
 
+import java.security.Principal;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -15,6 +19,9 @@ public class ContentController {
     @Autowired
     private ManageContentService manageContentService;
 
+    @Autowired
+    private UserDetails userDetails;
+
     @GetMapping("/contents")
     public List<Content> index() {
         return manageContentService.fetchAllContent();
@@ -23,7 +30,7 @@ public class ContentController {
 
     @GetMapping("/")
     public String newIndex() {
-        return "hello world";
+        return "Welcome to FloppyFeed!";
     }
 
     @GetMapping("/content/{id}")
@@ -34,15 +41,19 @@ public class ContentController {
     }
 
     @PostMapping("/content")
-    public Optional<Content> create(@RequestBody Map<String, String> body) {
+    @ExceptionHandler(ContentException.class)
+    public Content create(@RequestBody Map<String, String> body, Authentication authentication) throws ContentException {
         String type = body.get("type");
         String title = body.get("title");
-        int userId = 1; // TODO implement spring security to get userId
-        int mediaTypeId = 1;
-        body.get("mediaTypeId");
+        int mediaTypeId = Integer.parseInt(body.get("mediaTypeId"));
         String description = body.get("description");
         String status = body.get("status");
-        return manageContentService.createContent(type, title, userId, mediaTypeId, description, status);
+        int userId = userDetails.currentUserId(authentication);
+        Optional<Content> content = manageContentService.createContent(type, title, userId, mediaTypeId, description, status);
+        if (content.isPresent()){
+            return content.get();
+        }
+        throw new ContentException(500, "Error while creating content", "Unable to create content for given details");
     }
 
     @PutMapping("/content/{id}")
