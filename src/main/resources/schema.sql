@@ -54,17 +54,17 @@ create table user_authentication(
 )
 
 
-#create table role table
+#create table user_role table
 
-create table role(
+create table user_role(
     id int(6) unsigned auto_increment primary key,
+    user_id int(6) unsigned,
     name varchar(100) not null,
     description varchar(500) not null,
     created_at timestamp not null default now(),
-    updated_at timestamp not null default now() on update now()
+    updated_at timestamp not null default now() on update now(),
+    foreign key (user_id) references user(id)
 );
-
-#create table user role table;
 
 
 

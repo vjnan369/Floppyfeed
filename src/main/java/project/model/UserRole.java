@@ -1,20 +1,44 @@
 package project.model;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name = "user_role")
 public class UserRole {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private int userId;
-    private int roleId;
+    private String name;
     private Date createdAt;
     private Date updatedAt;
 
-    public UserRole(int id, int userId, int roleId, Date createdAt, Date updatedAt) {
-        this.id = id;
+    public UserRole() {
+
+    }
+
+    public UserRole(int userId, String name, Date createdAt, Date updatedAt) {
         this.userId = userId;
-        this.roleId = roleId;
+        this.name = name;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
+    }
+
+    public UserRole(int id, int userId, String name, Date createdAt, Date updatedAt) {
+        this.id = id;
+        this.userId = userId;
+        this.name = name;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getId() {
@@ -27,14 +51,6 @@ public class UserRole {
 
     public void setUserId(int userId) {
         this.userId = userId;
-    }
-
-    public int getRoleId() {
-        return roleId;
-    }
-
-    public void setRoleId(int roleId) {
-        this.roleId = roleId;
     }
 
     public Date getCreatedAt() {
@@ -58,7 +74,7 @@ public class UserRole {
         return "UserRole{" +
                 "id=" + id +
                 ", userId=" + userId +
-                ", roleId=" + roleId +
+                ", name='" + name + '\'' +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 '}';

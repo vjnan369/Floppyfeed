@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import project.model.User;
 import project.model.UserAuthentication;
+import project.model.UserRole;
 import project.repository.UserAuthenticationRepository;
 import project.repository.UserRepository;
+import project.repository.UserRoleRepository;
 
 import javax.transaction.Transactional;
 import java.util.Date;
@@ -19,6 +21,9 @@ public class ManageUserServiceImpl implements ManageUserService {
 
     @Autowired
     private UserAuthenticationRepository userAuthenticationRepository;
+
+    @Autowired
+    private UserRoleRepository userRoleRepository;
 
     //    private UserInfo userInfo = new UserInfo();
     // returns user details for given userid
@@ -36,6 +41,8 @@ public class ManageUserServiceImpl implements ManageUserService {
         int userId = savedUser.getId();
         UserAuthentication newUserAuthentication = new UserAuthentication(userId, email, password, null, null, createdAt, updatedAt);
         userAuthenticationRepository.save(newUserAuthentication);
+        UserRole newUserRole = new UserRole(userId, "ROLE_USER", new Date(), new Date());
+        userRoleRepository.save(newUserRole);
         return Optional.of(newUser);
     }
 
@@ -49,7 +56,7 @@ public class ManageUserServiceImpl implements ManageUserService {
         return true;
     }
 
-    public UserAuthentication getUserByEmail(String email){
+    public UserAuthentication getUserByEmail(String email) {
         return userAuthenticationRepository.findByEmail(email);
     }
 
