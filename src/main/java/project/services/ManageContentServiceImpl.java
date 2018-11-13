@@ -17,8 +17,9 @@ public class ManageContentServiceImpl implements ManageContentService {
 //    private ContentInfo contentInfo = new ContentInfo();
 
     private static ManageContentServiceImpl instance = null;
-    public static ManageContentServiceImpl getInstance(){
-        if(instance == null){
+
+    public static ManageContentServiceImpl getInstance() {
+        if (instance == null) {
             instance = new ManageContentServiceImpl();
         }
         return instance;
@@ -39,13 +40,14 @@ public class ManageContentServiceImpl implements ManageContentService {
         Date createdAt = new Date();
         Date updatedAt = new Date();
         Date publishedAt = null;
-        if(status.equals("published")){
+        if (status.equals("published")) {
             publishedAt = new Date();
         }
         Content content = new Content(type, title, userId, mediaTypeId, description, status, publishedAt, createdAt, updatedAt);
         return Optional.of(contentInfo.save(content));
     }
-//
+
+    //
 //    // returns list contents which having given searchtext
 //    public List<Content> searchContent(String searchText) {
 //        return contentInfo.searchContent(searchText);
@@ -64,9 +66,9 @@ public class ManageContentServiceImpl implements ManageContentService {
     }
 
     public boolean deleteContent(int id) {
-        try{
+        try {
             contentInfo.delete(id);
-        } catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e);
             return false;
         }
