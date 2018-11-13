@@ -1,7 +1,6 @@
 package project.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import project.model.Content;
 import project.services.ManageContentService;
@@ -13,7 +12,7 @@ import java.util.Optional;
 @RestController
 public class ContentController {
 
-    @Autowired(required = true)
+    @Autowired
     private ManageContentService manageContentService;
 
     @GetMapping("/contents")

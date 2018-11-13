@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="content")
+@Table(name = "content")
 public class Content {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,15 +17,13 @@ public class Content {
     private String description;
     private String status;
     private Date publishedAt;
-
-    @JoinColumn(name="created_at")
     private Date createdAt;
-
     private Date updatedAt;
 
-    public Content(){
+    public Content() {
 
     }
+
     public Content(String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
         this.type = type;
         this.title = title;
@@ -75,7 +73,7 @@ public class Content {
         result = prime * result + userId;
         result = prime * result + mediaTypeId;
         result = prime * result + ((title == null) ? 0 : title.hashCode());
-        result = prime *     result + ((description == null) ? 0 : description.hashCode());
+        result = prime * result + ((description == null) ? 0 : description.hashCode());
         result = prime * result + ((status == null) ? 0 : status.hashCode());
         return result;
     }
