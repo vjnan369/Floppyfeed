@@ -23,6 +23,6 @@ public class Authorizer {
     }
 
     public boolean isAuthor() {
-        return false;
+        return true;
     }
 }

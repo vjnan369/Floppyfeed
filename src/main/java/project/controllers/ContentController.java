@@ -8,7 +8,6 @@ import project.model.Content;
 import project.services.ManageContentService;
 import project.utility.UserDetails;
 
-import java.security.Principal;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -50,20 +49,20 @@ public class ContentController {
         String status = body.get("status");
         int userId = userDetails.currentUserId(authentication);
         Optional<Content> content = manageContentService.createContent(type, title, userId, mediaTypeId, description, status);
-        if (content.isPresent()){
+        if (content.isPresent()) {
             return content.get();
         }
         throw new ContentException(500, "Error while creating content", "Unable to create content for given details");
     }
 
     @PutMapping("/content/{id}")
-    public Content update(@PathVariable int id, @RequestBody Map<String, String> body) {
+    public Content update(@PathVariable int id, @RequestBody Map<String, String> body, Authentication authentication) {
         String type = body.get("type");
         String title = body.get("title");
         String description = body.get("description");
         String status = body.get("status");
-        int userId = 3; //TODO implement spring security to get userId
-        int mediaTypeId = 1; //TODO fetch media type id
+        int userId = userDetails.currentUserId(authentication);
+        int mediaTypeId = Integer.parseInt(body.get("mediaTypeId"));
         return manageContentService.updateContent(id, type, title, userId, mediaTypeId, description, status);
     }
 
