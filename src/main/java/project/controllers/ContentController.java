@@ -52,7 +52,7 @@ public class ContentController {
         if (content.isPresent()) {
             return content.get();
         }
-        throw new ContentException(500, "Error while creating content", "Unable to create content for given details");
+        throw new ContentException(500, "Error while creating content", "/content", "Unable to create content for given details");
     }
 
     @PutMapping("/content/{id}")

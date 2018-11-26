@@ -23,6 +23,7 @@ public class Authorizer {
     }
 
     public boolean isAuthor() {
+        System.out.println("Hello world");
         return true;
     }
 }

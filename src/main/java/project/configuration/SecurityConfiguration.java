@@ -2,6 +2,7 @@ package project.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -25,6 +26,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().antMatchers("/", "/user/registration").permitAll()
+                .antMatchers(HttpMethod.POST, "/content").hasRole("Authorizer.isAuthor()")
                 .anyRequest().authenticated().and().formLogin()
                 .permitAll().and().logout().permitAll()
                 .and().httpBasic();
