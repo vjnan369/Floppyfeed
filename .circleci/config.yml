@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: codecentric/springboot-maven3-centos
+        
     working_directory: ~/Floppyfeed
     steps:
       - checkout
