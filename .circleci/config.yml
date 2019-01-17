@@ -2,6 +2,6 @@ version: 2
 jobs:
   build:
     working_directory: ~/Floppyfeed
-  steps:
-    - checkout
-    - run: mvn test
+    steps:
+      - checkout
+      - run: mvn test
