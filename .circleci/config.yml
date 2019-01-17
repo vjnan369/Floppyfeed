@@ -3,8 +3,18 @@ jobs:
   build:
     docker:
       - image: codecentric/springboot-maven3-centos
-        
+
     working_directory: ~/Floppyfeed
     steps:
       - checkout
-      - run: mvn test
+      - run:
+          name: setup code climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - run:
+          name: run test cases
+          command: |
+            ./cc-test-reporter before-build
+            mvn test
+            ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
