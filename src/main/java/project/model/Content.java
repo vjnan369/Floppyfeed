@@ -37,7 +37,7 @@ public class Content {
     }
 
     public Content(int id, String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
-        this.id = id;d
+        this.id = id;
         this.type = type;
         this.title = title;
         this.userId = userId;
