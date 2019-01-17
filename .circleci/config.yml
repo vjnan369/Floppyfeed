@@ -2,7 +2,8 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/openjdk:8-jdk
+      - image: codecentric/springboot-maven3-centos
+        
     working_directory: ~/Floppyfeed
     steps:
       - checkout
