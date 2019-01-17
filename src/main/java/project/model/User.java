@@ -1,8 +1,14 @@
 package project.model;
 
+import javax.persistence.*;
 import java.util.Date;
 
+
+@Entity
+@Table(name="user")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String firstName;
     private String lastName;
@@ -10,8 +16,19 @@ public class User {
     private Date createdAt;
     private Date updatedAt;
 
-    public User(int id, String firstName, String lastName, String phoneNumber, Date createdAt, Date updatedAt){
+    public User(){
+
+    }
+    public User(int id, String firstName, String lastName, String phoneNumber, Date createdAt, Date updatedAt) {
         this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
+
+    public User(String firstName, String lastName, String phoneNumber, Date createdAt, Date updatedAt) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;

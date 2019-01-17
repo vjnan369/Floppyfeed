@@ -8,9 +8,8 @@ import project.model.Content;
 import project.model.Message;
 import project.model.User;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import javax.swing.text.html.Option;
+import java.util.*;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -50,14 +49,15 @@ public class ManageMessageServiceImplTest {
     // Test case for getMessageById method
     @ParameterizedTest
     @MethodSource("getMessagByIdTestData")
-    public void getMessageById(int id, Message expectedResult) {
+    public void getMessageById(int id, Optional<Message> expectedResult) {
         ManageMessageServiceImpl manageMessageService = new ManageMessageServiceImpl();
         assertTrue(expectedResult.equals(manageMessageService.getMessageById(id)));
     }
 
     static Stream<Arguments> getMessagByIdTestData() {
         return Stream.of(
-                Arguments.of(1, message)
+                Arguments.of(1, Optional.of(message)),
+                Arguments.of(-1, Optional.empty())
         );
     }
 
@@ -74,7 +74,8 @@ public class ManageMessageServiceImplTest {
         List<Message> filteredMessages = new ArrayList<>();
         filteredMessages.add(message);
         return Stream.of(
-                Arguments.of(1, filteredMessages)
+                Arguments.of(1, filteredMessages),
+                Arguments.of(-1, Collections.emptyList())
         );
     }
 
@@ -90,7 +91,8 @@ public class ManageMessageServiceImplTest {
         List<Message> filteredMessages = new ArrayList<>();
         filteredMessages.add(message);
         return Stream.of(
-                Arguments.of(1, filteredMessages)
+                Arguments.of(1, filteredMessages),
+                Arguments.of(-1, Collections.emptyList())
         );
     }
 
@@ -121,7 +123,8 @@ public class ManageMessageServiceImplTest {
 
     static Stream<Arguments> updateMessageTestData() {
         return Stream.of(
-                Arguments.of(id, userId, contentId, description, true)
+                Arguments.of(id, userId, contentId, description, true),
+                Arguments.of(-1, userId, contentId, description, false)
         );
     }
 
@@ -137,7 +140,8 @@ public class ManageMessageServiceImplTest {
     static Stream<Arguments> deleteMessageTestData() {
         return Stream.of(
                 Arguments.of(1, true),
-                Arguments.of(2, true)
+                Arguments.of(2, true),
+                Arguments.of(-1, false)
         );
     }
 

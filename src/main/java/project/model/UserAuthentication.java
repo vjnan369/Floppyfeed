@@ -1,8 +1,14 @@
 package project.model;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name="user_authentication")
 public class UserAuthentication {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private int userId;
     private String email;
@@ -12,8 +18,21 @@ public class UserAuthentication {
     private Date createdAt;
     private Date updatedAt;
 
+    public UserAuthentication(){
+
+    }
     public UserAuthentication(int id, int userId, String email, String password, String confirmationToken, Date confirmedAt, Date createdAt, Date updatedAt) {
         this.id = id;
+        this.userId = userId;
+        this.email = email;
+        this.password = password;
+        this.confirmationToken = confirmationToken;
+        this.confirmedAt = confirmedAt;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+    }
+
+    public UserAuthentication(int userId, String email, String password, String confirmationToken, Date confirmedAt, Date createdAt, Date updatedAt) {
         this.userId = userId;
         this.email = email;
         this.password = password;

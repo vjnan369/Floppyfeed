@@ -7,11 +7,10 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import project.model.Content;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Stream;
 
+import static org.junit.gen5.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -96,14 +95,15 @@ public class ManageContentServiceImplTest {
     // Test case for getContentById method
     @ParameterizedTest
     @MethodSource("getContentByIdTestData")
-    public void getContentById(int id, Content expectedResult) {
+    public void getContentById(int id, Optional<Content> expectedResult) {
         ManageContentServiceImpl manageContentService = new ManageContentServiceImpl();
         assertTrue(expectedResult.equals(manageContentService.getContentById(id)));
     }
 
     static Stream<Arguments> getContentByIdTestData() {
         return Stream.of(
-                Arguments.of(1, content)
+                Arguments.of(1, Optional.of(content)),
+                Arguments.of(-1, Optional.empty())
         );
     }
 
@@ -119,9 +119,9 @@ public class ManageContentServiceImplTest {
     // Test case for creatContent method
     @ParameterizedTest
     @MethodSource("createContentTestData")
-    public void createContent(String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt) {
+    public void createContent(String type, String title, int userId, int mediaTypeId, String description, String status, Date publishedAt, Date createdAt, Date updatedAt, Content content) {
         ManageContentServiceImpl manageContentService = new ManageContentServiceImpl();
-        assertTrue(content.equals(manageContentService.createContent(type, title, userId, mediaTypeId, description, status, publishedAt, createdAt, updatedAt)));
+        assertTrue(Optional.of(content).equals(manageContentService.createContent(type, title, userId, mediaTypeId, description, status)));
     }
 
 
@@ -132,34 +132,18 @@ public class ManageContentServiceImplTest {
     }
 
 
-    // Test case for searchContent method
-    @ParameterizedTest
-    @MethodSource("searchContentTestData")
-    public void searchContent(String searchText, String expectedResult) {
-        ManageContentServiceImpl manageContentService = new ManageContentServiceImpl();
-        assertEquals(expectedResult, manageContentService.searchContent(searchText).toString());
-    }
-
-    static Stream<Arguments> searchContentTestData() {
-        List<Content> searchContents = new ArrayList<>();
-        searchContents.add(content);
-        return Stream.of(
-                Arguments.of("jackson", searchContents.toString())
-        );
-    }
-
-
     // Test case for update content
     @ParameterizedTest
     @MethodSource("updateContentTestData")
-    public void updateContent(int id, String type, String title, int userId, int mediaTypeId, String description, String status, Content expectedResult) {
+    public void updateContent(int id, String type, String title, int userId, int mediaTypeId, String description, String status, boolean expectedResult) {
         ManageContentServiceImpl manageContentService = new ManageContentServiceImpl();
-        assertEquals(expectedResult, manageContentService.updateContent(id, type, title, userId, mediaTypeId, description, status));
+        assertNotEquals(expectedResult, manageContentService.updateContent(id, type, title, userId, mediaTypeId, description, status));
     }
 
     static Stream<Arguments> updateContentTestData() {
         return Stream.of(
-                Arguments.of(id, type, title, userId, mediaTypeId, description, status, content)
+                Arguments.of(id, type, title, userId, mediaTypeId, description, status, true),
+                Arguments.of(-1, type, title, userId, mediaTypeId, description, status, false)
         );
     }
 
@@ -174,8 +158,9 @@ public class ManageContentServiceImplTest {
 
     static Stream<Arguments> deleteContentTestData() {
         return Stream.of(
-                Arguments.of(1, true),
-                Arguments.of(2, true)
+                Arguments.of(1, false),
+                Arguments.of(2, true),
+                Arguments.of(-1, false)
         );
     }
 }
